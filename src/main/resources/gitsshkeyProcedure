@@ -18,6 +18,16 @@ Click Add SSH key
 -------------------
 Git commands -
 
-to clone repo
+to clone repo - creates the copy of remote repo
 
 git clone git@github.com:learning-automation/AutomationRepo.git
+
+git status - to know what all files are modified
+
+git add filename ( to add the file in staggin env)
+
+git commit -m "messaage" ( to add the changes in local repo)
+
+git push ( to push the changes in remote repo)
+
+git pull ( to pull the latest from remote 
