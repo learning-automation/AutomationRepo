@@ -12,7 +12,7 @@ public class TestListners implements ITestListener {
     }
 
     public void onTestSuccess(ITestResult iTestResult) {
-        Reporter.log("Test cases is green");
+        Reporter.log("Test cases is green ");
         ScreenShot.takeScreenShot(iTestResult.getName());
     }
 
