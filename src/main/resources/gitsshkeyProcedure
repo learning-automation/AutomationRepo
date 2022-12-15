@@ -30,4 +30,4 @@ git commit -m "messaage" ( to add the changes in local repo)
 
 git push ( to push the changes in remote repo)
 
-git pull ( to pull the latest from remote 
+git pull ( to pull the latest from remote
