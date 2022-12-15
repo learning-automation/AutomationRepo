@@ -1,0 +1,23 @@
+Procedure to generate ssh key
+
+Create a folder - GitRepo
+Rightclick > gitbash here > ssh-keygen -t ed25519 -C "email Id by which you created account "  > hit entert > enter > enter
+Navigate to > c > users > your user > .ssh folder > id_ed25519.pub ( microsoft pusblisher file) > Right click > open with notepad > copy content
+
+
+Adding key to Git
+
+login > profile > setting > SSH and GPG Key > New SSH Key >
+
+title > put anything > e.g. MyKey
+Key type > authentication key
+Key > paste the copied content
+Click Add SSH key
+
+
+-------------------
+Git commands -
+
+to clone repo
+
+git clone git@github.com:learning-automation/AutomationRepo.git
