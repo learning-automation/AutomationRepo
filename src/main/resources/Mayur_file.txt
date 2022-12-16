@@ -1,2 +1,4 @@
 Hii My git first commit i am pushing it.
 I am changing it to pankaj sir.
+i am doing something
+my wish to have conflicts
