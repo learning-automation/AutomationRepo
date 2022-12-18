@@ -35,3 +35,5 @@ git pull ( to pull the latest from remote)
 git checkout -b branchName ( to create and switch to new branch )
 
 git checkout branchName ( to swtich already created branch)
+
+git pull origin master
