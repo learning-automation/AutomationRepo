@@ -46,6 +46,7 @@ public class ForgetInfoCases {
         forget_login.state(testCase.getProperty("state1"));
         forget_login.zip(testCase.getProperty("zip_code1"));
         forget_login.ssnCode(testCase.getProperty("ssn_number1"));
+
         forget_login.clickLogIn();
 
     }
