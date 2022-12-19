@@ -40,7 +40,7 @@ public class AcntOvervwValidCases {
     }
 
     @Test
-    public void tc001_acntoverview_validcase(){
+    public void tc001_acntoverview_validcase1(){
         br.navigateUrl(browser.getProperty("url"));
         acntoverviewobj.clickaccountoverview();
         acntoverviewobj.clickaccountid();

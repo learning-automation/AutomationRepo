@@ -61,7 +61,7 @@ public class AccountOverview {
 
     public void clickaccounttype(){
         WebElement eleacnttypelist = wait.until(ExpectedConditions.elementToBeClickable(selecttype));
-        Select accounttypelist=new Select(eleacnttypelist);
+        Select accounttypelist  = new Select(eleacnttypelist);
         List<WebElement> accountoption = accounttypelist.getOptions();
         accounttypelist.selectByIndex(2);
         selecttype.click();
