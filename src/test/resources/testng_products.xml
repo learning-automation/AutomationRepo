@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test name="AutomationRepo">
+        <classes>
+            <class name="testcases.ui.products.TC_Products">
+                <methods>
+                    <include name="tc005_parabank_Products"/>
+                </methods>
+            </class> <!-- testcases.ui.products.TC_Products -->
+        </classes>
+    </test> <!-- AutomationRepo -->
+</suite> <!-- Default Suite -->
