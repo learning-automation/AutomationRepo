@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Running Regression " >
-    <listeners>
-        <listener class-name="listners.TestListners"></listener>
-    </listeners>
   <test name="Learning concepts">
-   <packages>
-       <package name="testcases.ui.login" />
-   </packages>
+   <classes>
+       <class name="testcases.ui.login.LoginValidCases"/>
+   </classes>
   </test>
 </suite>
