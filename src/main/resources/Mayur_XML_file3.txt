@@ -1,0 +1,15 @@
+<suite name="Running Regression">
+    <listeners>
+        <listener class-name="listeners.TestListners"></listener>
+    </listeners>
+  <test name="Login Testform">
+      <classes>
+          <class name="testcases.ui.accountoverviews.AcntOvervwValidCases">
+              <methods>
+                  <include name="tc001_parabank_validlogin"/>
+              </methods>
+          </class>
+
+      </classes>
+  </test>
+</suite>
