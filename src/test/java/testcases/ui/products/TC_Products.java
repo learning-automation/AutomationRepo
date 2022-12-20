@@ -29,11 +29,10 @@ public class TC_Products {
         driver = br.getDriver();
         br.navigateUrl(browser.getProperty("url"));
         products = new Products((br.getDriver()));
-        products.clickProducts();
-        products.hoverProducts1();
+
     }
 
-  /*  @Test
+    @Test
     public void tc001_parabank_Products() {
         br.navigateUrl(browser.getProperty("url"));
         products.clickProducts(); // Products on Home Page
@@ -45,10 +44,12 @@ public class TC_Products {
         br.navigateUrl(browser.getProperty("url"));
         products.hoverProducts1(); // Products on Parasoft Page
 
-    }*/
+    }
 
     @Test
     public void tc003_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_C(); // Parasoft C/C++
 
@@ -56,6 +57,8 @@ public class TC_Products {
 
     @Test
     public void tc004_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_JTest();
 
@@ -63,6 +66,8 @@ public class TC_Products {
 
     @Test
     public void tc005_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_JTest();
 
@@ -70,6 +75,8 @@ public class TC_Products {
 
     @Test
     public void tc006_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_dotTest();
 
@@ -77,6 +84,8 @@ public class TC_Products {
 
     @Test
     public void tc007_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_Insure();
 
@@ -84,6 +93,8 @@ public class TC_Products {
 
     @Test
     public void tc008_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_DTP();
 
@@ -91,6 +102,8 @@ public class TC_Products {
 
     @Test
     public void tc009_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_CTP();
 
@@ -98,6 +111,8 @@ public class TC_Products {
 
     @Test
     public void tc010_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_Selenic();
 
@@ -105,6 +120,8 @@ public class TC_Products {
 
     @Test
     public void tc011_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_Soatest();
 
@@ -112,6 +129,8 @@ public class TC_Products {
 
     @Test
     public void tc012_parabank_Products() {
+        products.clickProducts();
+        products.hoverProducts1();
         products.hoverProducts1();
         products.clickParasoft_virtualize();
 
