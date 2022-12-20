@@ -11,29 +11,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class TransferFunds {
-
-
     @FindBy(xpath = "//a[contains(text(),'Transfer Funds')]")
-    public WebElement transferfund;
-
-
-    @FindBy(xpath = "//input[@id='amount']")
-    public WebElement amount;
-
-    @FindBy(xpath = "//select[@id='fromAccountId']")
-    public WebElement fromaccount;
-
-    @FindBy(xpath = "//select[@id='toAccountId']")
-    public WebElement toaccount;
-
+    public WebElement linkTransferFund;
+    @FindBy(xpath = "//*[@id='amount']")
+    public WebElement txtAmount;
+    @FindBy(xpath = "//*[@id='fromAccountId']")
+    public WebElement selectFromAccount;
+    @FindBy(xpath = "//*[@id='toAccountId']")
+    public WebElement selectToAccount;
     @FindBy(xpath = "//input[@class='button']")
-    public WebElement Transferbttn;
-
+    public WebElement buttonTransfer;
     private WebDriver driver;
-
     private WebDriverWait wait;
-
-
     public TransferFunds(WebDriver driver)
     {
         PageFactory.initElements(driver, this);
@@ -44,49 +33,44 @@ public class TransferFunds {
     public void clickTransferFunds()
     {
         //    WebElement ele = driver.findElement(transferfund);
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(transferfund));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkTransferFund));
         System.out.println("On Transfer fund: " + ele);
         ele.click();
     }
 
     public void enterAmount(String amt)
     {
-        WebElement ele = wait.until(ExpectedConditions.visibilityOf(amount));
-//        char[] amtArr = amt.toCharArray();
-//        for (char ch: amtArr) {
+        WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtAmount));
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-//            amount.sendKeys("" + ch);
-//        }
-        amount.sendKeys(amt);
-    }
 
+        txtAmount.sendKeys(amt);
+    }
     public void fromAccount()
     {
-        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(fromaccount));
+        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(selectFromAccount));
         Select fromAccntNolist = new Select(elelist);
         List<WebElement> accountOptions = fromAccntNolist.getOptions();
         fromAccntNolist.selectByIndex(0);
-        fromaccount.click();
+        selectFromAccount.click();
     }
-
     public void toAccount()
     {
-        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(toaccount));
+        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(selectToAccount));
         Select toAccntNolist = new Select(eletlist);
         List<WebElement> accountOptions = toAccntNolist.getOptions();
         toAccntNolist.selectByIndex(0);
-        toaccount.click();
+        selectToAccount.click();
 
     }
-
     public void clickButton()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(Transferbttn));
-        Transferbttn.click();
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(buttonTransfer));
+        buttonTransfer.click();
     }
 
 }
