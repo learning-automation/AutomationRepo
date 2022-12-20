@@ -31,30 +31,47 @@ public class AdminValidCases {
         br.maximize();
         driver = br.getDriver();
         login = new LoginPage(br.getDriver());
-        admin=new AdminPage(br.getDriver());
+        admin = new AdminPage(br.getDriver());
     }
+
     @Test
-    public void tc002_parabank_adminPageButton(){
+    public void tc002_parabank_adminPageButton() {
         admin.clickAdminPageButton();
 
     }
 
     @Test
-    public void tc002_parabank_initializeButton(){
+    public void tc002_parabank_initializeButton() {
         admin.clickInitializeButton();
 
     }
 
     @Test
-    public void tc002_parabank_cleanButton(){
+    public void tc002_parabank_cleanButton() {
         admin.clickCleanButton();
 
     }
 
     @Test
-    public void tc002_parabank_shutdownButton(){
+    public void tc002_parabank_shutdownButton() {
         admin.clickShutdownButton();
 
+    }
+
+    @Test
+    public void tc002_parabank_soapButton() {
+        admin.clickSoapButton();
+    }
+    @Test
+    public void tc002_parabank_restXMLButton() {
+        admin.clickRestXMLButton();
+    }
+    @Test
+    public void tc002_parabank_restJSONButton() {
+        admin.clickRestJSONButton();
+    }@Test
+    public void tc002_parabank_JDBCButton() {
+        admin.clickJDBCButton();
     }
 }
 
