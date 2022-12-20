@@ -25,6 +25,27 @@ public class AdminPage {
     @FindBy(xpath = "//*[@value='Shutdown']")
     public WebElement btnShutdown;
 
+    //data access mode
+    //radio buttons
+    @FindBy(xpath = "//*[@value='Shutdown']")
+    public WebElement btnSoap;
+    @FindBy(xpath = "//*[@value='Shutdown']")
+    public WebElement btnRestXML;
+    @FindBy(xpath = "//*[@value='Shutdown']")
+    public WebElement btnRestJSON;
+    @FindBy(xpath = "//*[@value='Shutdown']")
+    public WebElement btnJDBC;
+
+    //Web service
+    //WSDL
+    @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
+    public WebElement btnWSDL;
+    @FindBy(xpath = "//*[@href='services/ParaBank?wadl']")
+    public WebElement btnWADL;
+    @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
+    public WebElement btnSwagger;
+
+
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -57,4 +78,28 @@ public class AdminPage {
         ele.click();
         Reporter.log("Clicking shutdown button");
     }
+
+    public void clickSoapButton(){
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnSoap));
+        ele.click();
+        Reporter.log("Clicking soap button");
+    }
+    public void clickRestXMLButton(){
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnRestXML));
+        ele.click();
+        Reporter.log("Clicking rest xml button");
+    }
+    public void clickRestJSONButton(){
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnRestJSON));
+        ele.click();
+        Reporter.log("Clicking rest json button");
+    }
+    public void clickJDBCButton(){
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnJDBC));
+        ele.click();
+        Reporter.log("Clicking JDBC button");
+    }
+
+
+
 }
