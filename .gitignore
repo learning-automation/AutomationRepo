@@ -1,0 +1,5 @@
+target/
+.idea
+src/main/java/utility/Browser.java
+src/test/resources/ScreenShotes/
+
