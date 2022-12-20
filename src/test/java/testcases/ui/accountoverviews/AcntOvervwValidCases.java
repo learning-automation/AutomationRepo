@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import pageObjects.AccountOverview;
+import pageObjects.AccountOverviewPage;
 import pageObjects.LoginPage;
 import utility.Browser;
 import utility.TestDataReader;
@@ -14,7 +14,7 @@ import java.util.Properties;
 public class AcntOvervwValidCases {
     Browser br;
     LoginPage login;
-    AccountOverview acntoverviewobj;
+    AccountOverviewPage accountoverview;
     WebDriver driver;
     Properties browser;
     Properties testcase;
@@ -26,12 +26,12 @@ public class AcntOvervwValidCases {
     }
 
     @BeforeMethod
-    public void readtestData() {
+    public void readTestData() {
         br.launchBrowser();
         br.maximize();
         driver = br.getDriver();
         login = new LoginPage(br.getDriver());
-        acntoverviewobj = new AccountOverview(br.getDriver());
+        accountoverview = new AccountOverviewPage(br.getDriver());
         testcase = TestDataReader.readProperties("tc001.properties");
         br.navigateUrl(browser.getProperty("url"));
         login.enterUsername(testcase.getProperty("username"));
@@ -42,11 +42,13 @@ public class AcntOvervwValidCases {
     @Test
     public void tc001_acntoverview_validcase1(){
         br.navigateUrl(browser.getProperty("url"));
-        acntoverviewobj.clickaccountoverview();
-        acntoverviewobj.clickaccountid();
-        acntoverviewobj.clickselectmonths();
-        acntoverviewobj.clickaccounttype();
-        acntoverviewobj.clickgobutton();
+        accountoverview.clickAccountOverview();
+        accountoverview.clickAccountId();
+        accountoverview.clickSelectMonths();
+        accountoverview.clickAccountType();
+        accountoverview.clickgobutton();
+
+
         //acntoverviewobj.fundtransferrecieved();
     }
     /*@Test(priority = 2)
