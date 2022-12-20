@@ -34,7 +34,7 @@ public class ForgetInfoCases {
 
     @Test
     public void tC001_ForgetInfoParaBank() throws InterruptedException {
-        testCase = TestDataReader.readProperties("forgetlogininfo.properties");
+        testCase = TestDataReader.readProperties("ForgetLoginInfo.properties");
         br.navigateUrl(browser.getProperty("url"));
         forget_login.click_info();
         forget_login.getTitle(testCase.getProperty("title1"));
@@ -46,7 +46,6 @@ public class ForgetInfoCases {
         forget_login.state(testCase.getProperty("state1"));
         forget_login.zip(testCase.getProperty("zip_code1"));
         forget_login.ssnCode(testCase.getProperty("ssn_number1"));
-
         forget_login.clickLogIn();
 
     }
