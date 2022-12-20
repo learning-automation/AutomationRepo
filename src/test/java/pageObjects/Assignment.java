@@ -18,5 +18,5 @@ public class Assignment {
     // Pankaj - products -> Industries
     // Priya - products -> customers
     // shweta - products -> resources
-    // Dipali - products -> Constact US
+    // Dipiti - products -> Constact US
 }
