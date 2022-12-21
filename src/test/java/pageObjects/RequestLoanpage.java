@@ -34,7 +34,7 @@ public class RequestLoanpage {
 
 
     public RequestLoanpage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver,this);
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 90);
     }
