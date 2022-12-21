@@ -3,54 +3,78 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 public class RequestLoanpage {
 
-    public static String lnkrequestloan = "//a[@href='/parabank/requestloan.htm']";
-    public String loanamount= "//*[@id='amount']";
-    public String downpayent = "//*[@id='downPayment']";
-    public String FAc = "//select[@id='fromAccountId']";
-    public String button ="//*[@value='Apply Now']";
-    public String errormsg = "//div[@class='ng-scope']";
-    public WebDriver driver;
-    public static int lamt = 500000;
-    public static int Damt = 25000;
-    public int a = 3883;
+    @FindBy(xpath = "//a[@href='/parabank/requestloan.htm']")
+    public WebElement lnkrequestloan;
+
+    @FindBy(xpath = "//*[@id='amount']")
+    public WebElement loanamount;
+
+    @FindBy(xpath = "//*[@id='downPayment']")
+    public WebElement downpayent;
+
+    @FindBy(xpath = "//select[@id='fromAccountId']")
+    public WebElement formaccount;
+
+    @FindBy(xpath = "//*[@value='Apply Now']")
+    public WebElement button;
+
+    @FindBy(xpath = "//div[@class='ng-scope']")
+    public WebElement errormsg;
+
+    private WebDriver driver;
+    private WebDriverWait wait;
 
 
-
-    public RequestLoanpage(WebDriver driver){
+    public RequestLoanpage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, 90);
     }
 
-    public void requestloanhyperlnk(){
-        WebElement ele = driver.findElement(By.xpath(lnkrequestloan));
+    public void requestloanhyperlnk() {
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkrequestloan));
         ele.click();
-        Reporter.log("" );}
-
-    public void enterloanamount(){
-        driver.findElement(By.xpath(loanamount)).sendKeys("" +lamt);
+        Reporter.log("");
     }
 
-    public void enterdownpayment(){
-        driver.findElement(By.xpath(downpayent)).sendKeys("" +Damt);
+    public void enterloanamount(int a) {
+        WebElement ele = wait.until(ExpectedConditions.visibilityOf(loanamount));
+        ele.sendKeys();
+        Reporter.log("Enter loan amount" + a);
     }
 
-
-    public void FormAc(){
-        driver.findElement(By.xpath(FAc)).sendKeys("" +a);//click();
+    public void enterdownpayment(int b) {
+        WebElement ele = wait.until(ExpectedConditions.visibilityOf(downpayent));
+        ele.sendKeys();
+        Reporter.log("enter amount" + b);
     }
 
-    public void buttonClk (){
-        driver.findElement(By.xpath(button)).click();
+    public void FormAccount() {
+       formaccount.click();
+        Reporter.log("");
     }
 
-    public WebElement errormsg(){
-        return driver.findElement(By.xpath(errormsg));
+    public void buttonClk() {
+       button.click();
+        Reporter.log("");
     }
 
+    public void statusmsg() {
+        WebElement ele = wait.until(ExpectedConditions.visibilityOf(errormsg));
+        Reporter.log("error message");
 
+    }
 }
+
+
+
 
 
