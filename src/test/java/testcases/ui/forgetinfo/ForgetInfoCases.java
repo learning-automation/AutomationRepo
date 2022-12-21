@@ -1,5 +1,4 @@
 package testcases.ui.forgetinfo;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -7,7 +6,6 @@ import org.testng.annotations.Test;
 import pageObjects.ForgetLoginInfoPage;
 import utility.Browser;
 import utility.TestDataReader;
-
 import java.util.Properties;
 
 public class ForgetInfoCases {
@@ -16,7 +14,7 @@ public class ForgetInfoCases {
     WebDriver driver;
     Properties browser;
     Properties testCase;
-    ForgetLoginInfoPage forget_login;
+    ForgetLoginInfoPage forgetLoginInfoPage;
 
     @BeforeSuite
     public void readBrowser() {
@@ -29,24 +27,24 @@ public class ForgetInfoCases {
         br.launchBrowser();
         br.maximize();
         driver = br.getDriver();
-        forget_login = new ForgetLoginInfoPage(br.getDriver());
+        forgetLoginInfoPage = new ForgetLoginInfoPage(br.getDriver());
     }
 
     @Test
     public void tC001_ForgetInfoParaBank() throws InterruptedException {
         testCase = TestDataReader.readProperties("ForgetLoginInfo.properties");
         br.navigateUrl(browser.getProperty("url"));
-        forget_login.click_info();
-        forget_login.getTitle(testCase.getProperty("title1"));
-        forget_login.getInfoTitle(testCase.getProperty("title2"));
-        forget_login.firstName(testCase.getProperty("first_name"));
-        forget_login.lastName(testCase.getProperty("last_name"));
-        forget_login.address(testCase.getProperty("address1"));
-        forget_login.city(testCase.getProperty("city1"));
-        forget_login.state(testCase.getProperty("state1"));
-        forget_login.zip(testCase.getProperty("zip_code1"));
-        forget_login.ssnCode(testCase.getProperty("ssn_number1"));
-        forget_login.clickLogIn();
+        forgetLoginInfoPage.click_info();
+        forgetLoginInfoPage.getTitle(testCase.getProperty("title1"));
+        forgetLoginInfoPage.getInfoTitle(testCase.getProperty("title2"));
+        forgetLoginInfoPage.firstName(testCase.getProperty("first_name"));
+        forgetLoginInfoPage.lastName(testCase.getProperty("last_name"));
+        forgetLoginInfoPage.address(testCase.getProperty("address1"));
+        forgetLoginInfoPage.city(testCase.getProperty("city1"));
+        forgetLoginInfoPage.state(testCase.getProperty("state1"));
+        forgetLoginInfoPage.zip(testCase.getProperty("zip_code1"));
+        forgetLoginInfoPage.ssnCode(testCase.getProperty("ssn_number1"));
+        forgetLoginInfoPage.clickLogIn();
 
     }
 
