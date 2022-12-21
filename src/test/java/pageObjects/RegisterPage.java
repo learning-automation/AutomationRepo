@@ -8,43 +8,39 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-public class Register {
+public class RegisterPage {
     private WebDriver driver;
 
     @FindBy(partialLinkText = "Regis")
     public WebElement linkRegister;
-    @FindBy(xpath = "//input[@name='customer.firstName']")
+    @FindBy(xpath = "//*[@name='customer.firstName']")
     public WebElement txtFirstName;
-    @FindBy(xpath = "//input[@id='customer.lastName']")
+    @FindBy(xpath = "//*[@id='customer.lastName']")
     public WebElement txtLastName;
-    @FindBy(xpath = "//input[@id='customer.address.street']")
+    @FindBy(xpath = "//*[@id='customer.address.street']")
     public WebElement txtAddress;
-    @FindBy(xpath = "//input[@id='customer.address.city']")
+    @FindBy(xpath = "//*[@id='customer.address.city']")
     public WebElement txtCity;
-    @FindBy(xpath = "//input[@id='customer.address.state']")
+    @FindBy(xpath = "//*[@id='customer.address.state']")
     public WebElement txtState;
-    @FindBy(xpath = "//input[@id='customer.address.zipCode']")
+    @FindBy(xpath = "//*[@id='customer.address.zipCode']")
     public WebElement txtZipCode;
-    @FindBy(xpath = "//input[@id=\'customer.phoneNumber\']")
+    @FindBy(xpath = "//*[@id='customer.phoneNumber']")
     public WebElement txtPhone;
-    @FindBy(xpath = "//input[@id='customer.ssn']")
+    @FindBy(xpath = "//*[@id='customer.ssn']")
     public WebElement txtSsn;
-    @FindBy(xpath = "//input[@id='customer.username']")
+    @FindBy(xpath = "//*[@id='customer.username']")
     public WebElement txtUserName;
-    @FindBy(xpath = "//input[@id='customer.password']")
+    @FindBy(xpath = "//*[@id='customer.password']")
     public WebElement txtPassword;
-    @FindBy(xpath = "//input[@id='repeatedPassword']")
+    @FindBy(xpath = "//*[@id='repeatedPassword']")
     public WebElement txtConfirm;
-
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "//*[@type='submit']")
     public WebElement btnRegister;
-
-    @FindBy(xpath="//*[@class='error']")
-    public WebElement lblError;
 
     private WebDriverWait wait;
 
-    public Register(WebDriver driver)
+    public RegisterPage(WebDriver driver)
     {
         PageFactory.initElements(driver,this);
         this.driver=driver;
@@ -56,7 +52,7 @@ public class Register {
         WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(linkRegister));
         ele.click();
         Reporter.log("Clicking to Register");
-        //register.click();
+
     }
 
     public void enterFirstName(String firstname)
@@ -141,15 +137,6 @@ public class Register {
         WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(btnRegister));
         ele.click();
         Reporter.log("Clicking to Register");
-        //txtRegister.click();
-    }
-    public WebElement getErrorElement()
-    {
-        return lblError;
 
     }
-
-
-
-
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import pageObjects.Register;
+import pageObjects.RegisterPage;
 import utility.Browser;
 import utility.TestDataReader;
 
@@ -14,7 +14,7 @@ import java.util.Properties;
 public class RegisterValidCases {
     Browser br;
     WebDriver driver;
-    Register register;
+    RegisterPage registerPage;
     Properties testcase;
     Properties browser;
 
@@ -30,7 +30,8 @@ public class RegisterValidCases {
     {
         br.launchBrowser();
         br.maximize();
-        register=new Register(br.getDriver());
+        driver=br.getDriver();
+        registerPage=new RegisterPage(br.getDriver());
     }
 
     @Test
@@ -39,19 +40,19 @@ public class RegisterValidCases {
     {
         testcase=TestDataReader.readProperties("register.properties");
         br.navigateUrl(browser.getProperty("url"));
-        register.clickRegister();
-        register.enterFirstName(testcase.getProperty("firstname"));
-        register.enterLastName(testcase.getProperty("lastname"));
-        register.enterAddress(testcase.getProperty("address"));
-        register.enterCity(testcase.getProperty("city"));
-        register.enterState(testcase.getProperty("state"));
-        register.enterZipCode(testcase.getProperty("zipcode"));
-        register.enterPhone(testcase.getProperty("phone"));
-        register.enterSsn(testcase.getProperty("ssn"));
-        register.enterUserName(testcase.getProperty("username"));
-        register.enterPassword(testcase.getProperty("password"));
-        register.enterConfirm(testcase.getProperty("confirm"));
-        register.clickRegister1();
+        registerPage.clickRegister();
+        registerPage.enterFirstName(testcase.getProperty("firstname"));
+        registerPage.enterLastName(testcase.getProperty("lastname"));
+        registerPage.enterAddress(testcase.getProperty("address"));
+        registerPage.enterCity(testcase.getProperty("city"));
+        registerPage.enterState(testcase.getProperty("state"));
+        registerPage.enterZipCode(testcase.getProperty("zipcode"));
+        registerPage.enterPhone(testcase.getProperty("phone"));
+        registerPage.enterSsn(testcase.getProperty("ssn"));
+        registerPage.enterUserName(testcase.getProperty("username"));
+        registerPage.enterPassword(testcase.getProperty("password"));
+        registerPage.enterConfirm(testcase.getProperty("confirm"));
+        registerPage.clickRegister1();
 
 
     }
