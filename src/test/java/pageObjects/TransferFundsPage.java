@@ -7,10 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import java.util.List;
 
-public class TransferFunds {
+public class TransferFundsPage {
     @FindBy(xpath = "//a[contains(text(),'Transfer Funds')]")
     public WebElement linkTransferFund;
     @FindBy(xpath = "//*[@id='amount']")
@@ -27,7 +28,7 @@ public class TransferFunds {
     private static final String FROM_ACCOUNT = "14232";
     private static final String TO_ACCOUNT = "14232";
 
-    public TransferFunds(WebDriver driver)
+    public TransferFundsPage(WebDriver driver)
     {
         PageFactory.initElements(driver, this);
         this.driver = driver;
@@ -36,10 +37,11 @@ public class TransferFunds {
 
     public void clickTransferFunds()
     {
-        //    WebElement ele = driver.findElement(transferfund);
+
+
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkTransferFund));
-        System.out.println("On Transfer fund: " + ele);
         ele.click();
+        Reporter.log("Click On Transfer Fund Link");
     }
 
     public void enterAmount(String amt)
@@ -53,6 +55,7 @@ public class TransferFunds {
             }
 
         txtAmount.sendKeys(amt);
+            Reporter.log("Enter the Amount " +amt);
     }
     public void fromAccount()
     {
@@ -61,6 +64,7 @@ public class TransferFunds {
         List<WebElement> accountOptions = fromAccntNolist.getOptions();
         fromAccntNolist.selectByValue(FROM_ACCOUNT);
         ddFromAccountList.click();
+        Reporter.log("Selecting FromAccount Number: "+FROM_ACCOUNT);
     }
     public void toAccount()
     {
@@ -69,12 +73,14 @@ public class TransferFunds {
         List<WebElement> accountOptions = toAccntNolist.getOptions();
         toAccntNolist.selectByValue(TO_ACCOUNT);
         ddToAccountList.click();
+        Reporter.log("Selecting ToAccount Number:"+TO_ACCOUNT);
 
     }
     public void clickButton()
     {
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(buttonTransfer));
         buttonTransfer.click();
+        Reporter.log("Clicking Transfer Button");
     }
 
 }

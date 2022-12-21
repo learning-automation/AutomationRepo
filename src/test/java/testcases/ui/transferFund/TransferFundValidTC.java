@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
-import pageObjects.TransferFunds;
+import pageObjects.TransferFundsPage;
 import utility.Browser;
 import utility.TestDataReader;
 
@@ -13,7 +13,7 @@ import java.util.Properties;
 
 public class TransferFundValidTC {
     Browser br;
-    TransferFunds fundtransfer;
+    TransferFundsPage fundtransfer;
     WebDriver driver;
     Properties browser;
     Properties testcase;
@@ -31,7 +31,7 @@ public class TransferFundValidTC {
         br.maximize();
         driver = br.getDriver();
         login = new LoginPage(br.getDriver());
-        fundtransfer = new TransferFunds(br.getDriver());
+        fundtransfer = new TransferFundsPage(br.getDriver());
         // for login
         testcase = TestDataReader.readProperties("tc001.properties");
         br.navigateUrl(browser.getProperty("url"));
