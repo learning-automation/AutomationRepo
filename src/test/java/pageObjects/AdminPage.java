@@ -27,13 +27,13 @@ public class AdminPage {
 
     //data access mode
     //radio buttons
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='soap']")
     public WebElement btnSoap;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='restxml']")
     public WebElement btnRestXML;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='restjson']")
     public WebElement btnRestJSON;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='jdbc']")
     public WebElement btnJDBC;
 
     //Web service
