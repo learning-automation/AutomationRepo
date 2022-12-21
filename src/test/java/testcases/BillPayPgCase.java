@@ -51,16 +51,16 @@ public class BillPayPgCase
     {
         billPayPg.clickBillPay();
         testcase2 = TestDataReader.readProperties("billpay.properties");
-        billPayPg.setTxtPayeename(testcase2.getProperty("payee"));
-        billPayPg.setTextAdresss(testcase2.getProperty("address"));
-        billPayPg.setTxtCity(testcase2.getProperty("city"));
-        billPayPg.setTxtState(testcase2.getProperty("state"));
-        billPayPg.setTxtZipcode(testcase2.getProperty("zipcode"));
-        billPayPg.setTxtPhonenumber(testcase2.getProperty("phone"));
-        billPayPg.setTxtAccountnumber(testcase2.getProperty("account"));
-        billPayPg.setTxtVerifyAccount(testcase2.getProperty("verifyaccount"));
-        billPayPg.setTxtAmount(testcase2.getProperty("amount"));
-        billPayPg.setSelectAccount();
+        billPayPg.enterTxtPayeename(testcase2.getProperty("payee"));
+        billPayPg.enterTextAdresss(testcase2.getProperty("address"));
+        billPayPg.enterTxtCity(testcase2.getProperty("city"));
+        billPayPg.enterTxtState(testcase2.getProperty("state"));
+        billPayPg.enterTxtZipcode(testcase2.getProperty("zipcode"));
+        billPayPg.enterTxtPhonenumber(testcase2.getProperty("phone"));
+        billPayPg.enterTxtAccountnumber(testcase2.getProperty("account"));
+        billPayPg.enterTxtVerifyAccount(testcase2.getProperty("verifyaccount"));
+        billPayPg.enterTxtAmount(testcase2.getProperty("amount"));
+        billPayPg.enterSelectAccount();
         billPayPg.clickBtnSend();
     }
 

@@ -4,15 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 public class BillPayPg
 {
-    private WebDriver driver;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
     public BillPayPg(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
+        this.wait = new WebDriverWait(driver, 45);
     }
     @FindBy(xpath = "//a[text()='Bill Pay']")
     WebElement linkBillpay;
@@ -52,52 +57,80 @@ public class BillPayPg
 
     public void clickBillPay()
     {
-        linkBillpay.click();
+        WebElement bilpaylink = wait.until(ExpectedConditions.elementToBeClickable(linkBillpay));
+        bilpaylink.click();
     }
-    public void setTxtPayeename(String payeename)
+    public void enterTxtPayeename(String payeename)
     {
-        txtPayeename.sendKeys(payeename);
+        WebElement payee = wait.until(ExpectedConditions.visibilityOf(txtPayeename));
+        payee.sendKeys(payeename);
+        Reporter.log("entering payeename: "+ payeename);
+        System.out.println("entering payeename: "+ payeename);;
     }
-    public void setTextAdresss(String address)
+    public void enterTextAdresss(String address)
     {
-        textAdresss.sendKeys(address);
+        WebElement adres = wait.until(ExpectedConditions.visibilityOf(textAdresss));
+        adres.sendKeys(address);
+        Reporter.log("Entering Address: " + address );
+        System.out.println("Entering Address: " + address );
     }
-    public void setTxtCity(String city)
+    public void enterTxtCity(String city)
     {
-        txtCity.sendKeys(city);
+        WebElement citi = wait.until(ExpectedConditions.visibilityOf(txtCity));
+        citi.sendKeys(city);
+        Reporter.log("Entering city: " + city);
+        System.out.println("Entering city: " + city);
     }
-    public void setTxtState(String state)
+    public void enterTxtState(String state)
     {
-        txtState.sendKeys(state);
+        WebElement stat = wait.until(ExpectedConditions.visibilityOf(txtState));
+        stat.sendKeys(state);
+        Reporter.log("Entering state: " + state);
+        System.out.println("Entering state: " + state);
     }
-    public void setTxtZipcode(String zipcode)
+    public void enterTxtZipcode(String zipcode)
     {
-        txtZipcode.sendKeys(zipcode);
+        WebElement zip = wait.until(ExpectedConditions.visibilityOf(txtZipcode));
+        zip.sendKeys(zipcode);
+        Reporter.log("Entering zipcode: " + zipcode);
+        System.out.println("Entering zipcode: " + zipcode);
     }
-    public void setTxtPhonenumber(String phonenumber)
+    public void enterTxtPhonenumber(String phonenumber)
     {
-        txtPhonenumber.sendKeys(phonenumber);
+        WebElement phone = wait.until(ExpectedConditions.visibilityOf(txtPhonenumber));
+        phone.sendKeys(phonenumber);
+        Reporter.log("Entering phone number: " + phonenumber);
+        System.out.println("Entering phone number: " + phonenumber);
     }
-    public void setTxtAccountnumber(String accountnumber)
+    public void enterTxtAccountnumber(String accountnumber)
     {
-        txtAccountnumber.sendKeys(accountnumber);
+        WebElement accoount = wait.until(ExpectedConditions.visibilityOf(txtAccountnumber));
+        accoount.sendKeys(accountnumber);
+        Reporter.log("Entering Account number: " + accountnumber);
+        System.out.println("Entering Account number: " + accountnumber);
     }
-    public void setTxtVerifyAccount(String verifyAccount)
+    public void enterTxtVerifyAccount(String verifyAccount)
     {
-        txtVerifyAccount.sendKeys(verifyAccount);
+        WebElement vaccount = wait.until(ExpectedConditions.visibilityOf(txtVerifyAccount));
+        vaccount.sendKeys(verifyAccount);
+        Reporter.log("verifyaccount: " + verifyAccount);
+        System.out.println("verifyaccount: " + verifyAccount);
     }
-    public void setTxtAmount(String amount)
+    public void enterTxtAmount(String amount)
     {
-        txtAmount.sendKeys(amount);
+        WebElement amt = wait.until(ExpectedConditions.visibilityOf(txtAmount));
+        amt.sendKeys(amount);
+        Reporter.log("Entering amount: " + amount);
+        System.out.println("Entering amount: " + amount);
     }
-    public void setSelectAccount()
+    public void enterSelectAccount()
     {
         Select dd = new Select(selectAccount);
         dd.selectByIndex(0);
     }
     public void clickBtnSend()
     {
-        btnSend.click();
+        WebElement sendbtn = wait.until(ExpectedConditions.elementToBeClickable(btnSend));
+        sendbtn.click();
     }
-
 }
