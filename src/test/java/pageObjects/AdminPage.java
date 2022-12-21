@@ -40,9 +40,9 @@ public class AdminPage {
     //WSDL
     @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
     public WebElement btnWSDL;
-    @FindBy(xpath = "//*[@href='services/ParaBank?wadl']")
+    @FindBy(xpath = "//*[@href='services/bank?_wadl&amp;_type=xml']")
     public WebElement btnWADL;
-    @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
+    @FindBy(xpath = "//*[@href='parabank/api-docs/index.html']")
     public WebElement btnSwagger;
 
 
