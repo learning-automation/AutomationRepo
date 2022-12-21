@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import java.util.List;
 
@@ -20,13 +21,18 @@ public class OpenNewAccountPage {
     @FindBy(xpath = "//select[@id='fromAccountId']")
     public WebElement ddAccountNumber;
 
-     @FindBy(css="input[value='submit']")
-     public WebElement openNewAccButton;
+    @FindBy(xpath="input[class='button']")
+    public WebElement btnOpenNewAccount;
+
+    @FindBy(className = "title")
+    public WebElement accountOpened;
+
+    @FindBy(id="newAccountId")
+    public WebElement newAccountIdIs;
 
 
-
-     private WebDriver driver;
-     private WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     public OpenNewAccountPage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -36,25 +42,33 @@ public class OpenNewAccountPage {
     public void openNewAccountClick(){
         WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(linkOpenNewAccount));
         linkOpenNewAccount.click();
+        Reporter.log("Clicking link");
     }
-    public void clickchecking(){
+    public void clickAccountType(){
         WebElement elechechekinglist=wait.until(ExpectedConditions.elementToBeClickable(ddAccountType));
         Select Accountcheckinglist=new Select(elechechekinglist);
         List<WebElement> checkingoption=Accountcheckinglist.getOptions();
         Accountcheckinglist.selectByIndex(1);
+        Reporter.log("Clicking dropdown list");
     }
 
-    public void clickaccountnumber(){
+    public void clickAccountNumber(){
         WebElement eleaccountlist=wait.until(ExpectedConditions.elementToBeClickable(ddAccountNumber));
-        Select Acountnolist=new Select(eleaccountlist);
-        List<WebElement> accountoptions=Acountnolist.getOptions();
-        Acountnolist.selectByValue("14454");
-}
+        Select accountNumberList=new Select(eleaccountlist);
+        List<WebElement> accountoptions=accountNumberList.getOptions();
+        accountNumberList.selectByIndex(0);
+        Reporter.log("Clicking dropdown list");
+    }
 
-      public void setOpennewAccountButton(){
-
-        WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(openNewAccButton));
-        openNewAccButton.click();
+    public void clickOpennewAccountButton(){
+        //System.out.println("parabank");
+        WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(btnOpenNewAccount));
+        btnOpenNewAccount.click();
+        Reporter.log("Clicking open new account  button");
+      //  Reporter.log("Clicking open new account button");
+       // System.out.println("New Account is created"+accountOpened.getText());
+        //accountOpened.getText();
+       // newAccountIdIs.getText();
 
 
     }

@@ -18,11 +18,11 @@ public class OpenNewAccountValidCases {
     WebDriver driver;
     Properties browser;
     Properties testcase;
-  @BeforeSuite
+    @BeforeSuite
     public void readBrowser(){
         browser= TestDataReader.readProperties("Browser.properties");
         br=new Browser(browser.getProperty("browser"));
-}
+    }
     @BeforeMethod
     public void readtestData() {
         br.launchBrowser();
@@ -35,15 +35,13 @@ public class OpenNewAccountValidCases {
         login.enterUsername(testcase.getProperty("username"));
         login.enterPassword(testcase.getProperty("password"));
         login.clickLogIn();
-}
-@Test
-public void TC_001Validcase(){
-      br.navigateUrl(browser.getProperty("url"));
-
-    opennewaccountpage.openNewAccountClick();
-    opennewaccountpage.clickchecking();
-    opennewaccountpage.clickaccountnumber();
-    opennewaccountpage.setOpennewAccountButton();
+    }
+    @Test
+    public void TC_001Validcase(){
+        opennewaccountpage.openNewAccountClick();
+        opennewaccountpage.clickAccountType();
+        opennewaccountpage.clickAccountNumber();
+        opennewaccountpage.clickOpennewAccountButton();
 
     }
 }
