@@ -6,49 +6,53 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import org.testng.Reporter;
 
-public class UpdateContactInfo {
+//import javax.xml.stream.XMLStreamReader;
+
+public class UpdateContactInfoPage<lblMsg> {
     private WebDriver driver;
     private WebDriverWait wait;
 
 
-    @FindBy(xpath = "//input[@id='customer.firstName']")
+    @FindBy(xpath = "//*[@id='customer.firstName']")
     public WebElement txtFirstname;
 
-    @FindBy(xpath="//input[@id='customer.lastName']")
+    @FindBy(xpath="//*[@id='customer.lastName']")
     public WebElement txtLastname;
 
-    @FindBy(xpath = "//input[@id='customer.address.street']")
+    @FindBy(xpath = "//*[@id='customer.address.street']")
     public WebElement txtAddress;
 
-    @FindBy(xpath = "//input[@id='customer.address.city']")
+    @FindBy(xpath = "//*[@id='customer.address.city']")
     public WebElement txtCity;
 
-    @FindBy(xpath = "//input[@id='customer.address.state']")
+    @FindBy(xpath = "//*[@id='customer.address.state']")
     public WebElement txtState;
 
-    @FindBy(xpath = "//input[@id='customer.address.zipCode']")
+    @FindBy(xpath = "//*[@id='customer.address.zipCode']")
     public WebElement txtZipcode;
 
-    @FindBy(xpath = "//input[@id='customer.phoneNumber']")
+    @FindBy(xpath = "//*[@id='customer.phoneNumber']")
     public WebElement txtPhone;
 
     @FindBy(xpath ="//*[@value='Update Profile']")
         public WebElement btnUpdate;
 
     @FindBy(xpath="//a[@href='register.htm']")
-    public WebElement clickRegister;
+    public WebElement linkRegister;
 
     @FindBy(xpath="//a[@href='/parabank/updateprofile.htm']")
-    public WebElement clickUpdateInfo;
+    public WebElement linkUpdateInfo;
 
 
     @FindBy(xpath = "//*[@class='title']")
     public WebElement lblMsg;
 
 
-    public UpdateContactInfo(WebDriver driver)
+    public UpdateContactInfoPage(WebDriver driver)
     {
       PageFactory.initElements(driver,this);
         this.driver=driver;
@@ -97,17 +101,17 @@ public class UpdateContactInfo {
         Reporter.log("Entering Phone Number:" + phone);
     }
 
-    public void clickRegister()
+    public void linkRegister()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(clickRegister));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkRegister));
         ele.click();
         Reporter.log("Click on Register");
 
     }
 
-    public void clickUpdateInfo()
+    public void linkUpdateInfo()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(clickUpdateInfo));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkUpdateInfo));
         ele.click();
         Reporter.log("Click on Update Contact Info");
     }
@@ -116,12 +120,18 @@ public class UpdateContactInfo {
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnUpdate));
         ele.click();
         Reporter.log("Clicking Update Profile button");
+
     }
 
 
-    public WebElement getMsgElement(){
-        return lblMsg;
-    }
+   // public WebElement getMsgElement(){
+   public void validateTitle(String title) {
+         Assert.assertEquals(lblMsg,lblMsg.getText());
+
+
+
+     // return lblMsg;
+       }
 
 
 
