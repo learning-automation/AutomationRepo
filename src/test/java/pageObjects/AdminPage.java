@@ -27,22 +27,22 @@ public class AdminPage {
 
     //data access mode
     //radio buttons
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='soap']")
     public WebElement btnSoap;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='restxml']")
     public WebElement btnRestXML;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='restjson']")
     public WebElement btnRestJSON;
-    @FindBy(xpath = "//*[@value='Shutdown']")
+    @FindBy(xpath = "//*[@value='jdbc']")
     public WebElement btnJDBC;
 
     //Web service
     //WSDL
     @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
     public WebElement btnWSDL;
-    @FindBy(xpath = "//*[@href='services/ParaBank?wadl']")
+    @FindBy(xpath = "//*[@href='services/bank?_wadl&amp;_type=xml']")
     public WebElement btnWADL;
-    @FindBy(xpath = "//*[@href='services/ParaBank?wsdl']")
+    @FindBy(xpath = "//*[@href='parabank/api-docs/index.html']")
     public WebElement btnSwagger;
 
 
