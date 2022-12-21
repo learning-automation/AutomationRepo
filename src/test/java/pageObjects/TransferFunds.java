@@ -16,13 +16,17 @@ public class TransferFunds {
     @FindBy(xpath = "//*[@id='amount']")
     public WebElement txtAmount;
     @FindBy(xpath = "//*[@id='fromAccountId']")
-    public WebElement selectFromAccount;
+    public WebElement ddFromAccountList;
     @FindBy(xpath = "//*[@id='toAccountId']")
-    public WebElement selectToAccount;
+    public WebElement ddToAccountList;
     @FindBy(xpath = "//input[@class='button']")
     public WebElement buttonTransfer;
     private WebDriver driver;
     private WebDriverWait wait;
+
+    private static final String FROM_ACCOUNT = "14232";
+    private static final String TO_ACCOUNT = "14232";
+
     public TransferFunds(WebDriver driver)
     {
         PageFactory.initElements(driver, this);
@@ -52,19 +56,19 @@ public class TransferFunds {
     }
     public void fromAccount()
     {
-        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(selectFromAccount));
+        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(ddFromAccountList));
         Select fromAccntNolist = new Select(elelist);
         List<WebElement> accountOptions = fromAccntNolist.getOptions();
-        fromAccntNolist.selectByIndex(0);
-        selectFromAccount.click();
+        fromAccntNolist.selectByValue(FROM_ACCOUNT);
+        ddFromAccountList.click();
     }
     public void toAccount()
     {
-        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(selectToAccount));
+        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(ddToAccountList));
         Select toAccntNolist = new Select(eletlist);
         List<WebElement> accountOptions = toAccntNolist.getOptions();
-        toAccntNolist.selectByIndex(0);
-        selectToAccount.click();
+        toAccntNolist.selectByValue(TO_ACCOUNT);
+        ddToAccountList.click();
 
     }
     public void clickButton()
