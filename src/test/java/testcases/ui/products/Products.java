@@ -14,7 +14,7 @@ public class Products {
     Browser br;
     WebDriver driver ;
     Properties browser ;
-    ProductsPage products;
+    ProductsPage productsPage;
 
     @BeforeSuite
     public void readBrowser(){
@@ -28,31 +28,31 @@ public class Products {
         br.maximize();
         driver = br.getDriver();
         br.navigateUrl(browser.getProperty("url"));
-        products = new ProductsPage((br.getDriver()));
+        productsPage = new ProductsPage((br.getDriver()));
     }
 
     @Test
     public void tc001_parabank_products(){
-        products.clickProductsLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_cLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_jTestLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_dotTestLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_insureLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_dtpLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_ctpLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_selenicLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_soatestLink();
-        products.hoverProducts1Link();
-        products.clickParasoft_virtualizeLink();
-        products.hoverProducts1Link();
+        productsPage.clickProductsLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_cLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_jTestLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_dotTestLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_insureLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_dtpLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_ctpLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_selenicLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_soatestLink();
+        productsPage.hoverProducts1Link();
+        productsPage.clickParasoft_virtualizeLink();
+        productsPage.hoverProducts1Link();
     }
 }
 

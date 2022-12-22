@@ -12,37 +12,37 @@ import org.testng.Reporter;
 
 public class ProductsPage {
     @FindBy(xpath = "//*[.='Products']")
-    public WebElement linkHomePageProducts;
+    public WebElement lnkHomePageProducts;
 
     @FindBy(xpath = "//*[@title='Products']")
-    public WebElement linkParasoftPageProducts;
+    public WebElement lnkParasoftPageProducts;
 
     @FindBy(xpath = "//*[@title='Parasoft C/C++test']")
-    public WebElement linkParasoftC;
+    public WebElement lnkParasoftC;
 
     @FindBy(xpath = "//*[@title='Parasoft Jtest']")
-    public WebElement linkParasoftJtest;
+    public WebElement lnkParasoftJtest;
 
     @FindBy(xpath = "//*[@title='Parasoft dotTEST']")
-    public WebElement linkParasoftDotTest;
+    public WebElement lnkParasoftDotTest;
 
     @FindBy(xpath = "//*[@title='Parasoft Insure++']")
-    public WebElement linkParasoftInsure;
+    public WebElement lnkParasoftInsure;
 
     @FindBy(xpath = "//*[@title='Parasoft DTP']")
-    public WebElement linkParasoftDTP;
+    public WebElement lnkParasoftDTP;
 
     @FindBy(xpath = "//*[@title='Parasoft CTP']")
-    public WebElement linkParasoftCTP;
+    public WebElement lnkParasoftCTP;
 
     @FindBy(xpath = "//*[@title='Parasoft Selenic']")
-    public WebElement linkParasoftSelenic;
+    public WebElement lnkParasoftSelenic;
 
     @FindBy(xpath = "//*[@title='Parasoft SOAtest']")
-    public WebElement linkParasoftSoatest;
+    public WebElement lnkParasoftSoatest;
 
     @FindBy(xpath = "//*[@title='Parasoft Virtualize']")
-    public WebElement linkParasoftVirtualize;
+    public WebElement lnkParasoftVirtualize;
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -54,69 +54,69 @@ public class ProductsPage {
     }
 
     public void clickProductsLink(){
-        WebElement eleProduct = wait.until(ExpectedConditions.elementToBeClickable(linkHomePageProducts));
+        WebElement eleProduct = wait.until(ExpectedConditions.elementToBeClickable(lnkHomePageProducts));
         eleProduct.click();
         Reporter.log("Clicking on Products Link");
 
     }
 
     public void hoverProducts1Link() {
-        WebElement eleParaProduct = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftPageProducts));
+        WebElement eleParaProduct = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftPageProducts));
         Actions ac = new Actions(driver);
         ac.moveToElement(eleParaProduct).perform();
         Reporter.log("Hover on Products Link");
     }
 
     public void clickParasoft_cLink(){
-        WebElement eleParasoftC = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftC));
+        WebElement eleParasoftC = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftC));
         eleParasoftC.click();
         Reporter.log("Clicking on ParasoftC/C++test Link");
     }
 
     public void clickParasoft_jTestLink(){
-        WebElement eleParasoftJtest = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftJtest));
+        WebElement eleParasoftJtest = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftJtest));
         eleParasoftJtest.click();
         Reporter.log("Clicking on ParasoftJtest Link");
     }
 
     public void clickParasoft_dotTestLink(){
-        WebElement eleParasoftDotTest = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftDotTest));
+        WebElement eleParasoftDotTest = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftDotTest));
         eleParasoftDotTest.click();
         Reporter.log("Clicking on ParasoftdotTEST Link");
     }
 
     public void clickParasoft_insureLink(){
-        WebElement eleParasoftInsure = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftInsure));
+        WebElement eleParasoftInsure = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftInsure));
         eleParasoftInsure.click();
         Reporter.log("Clicking on ParasoftInsure++ Link");
     }
 
     public void clickParasoft_dtpLink(){
-        WebElement eleParasoftDTP = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftDTP));
+        WebElement eleParasoftDTP = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftDTP));
         eleParasoftDTP.click();
         Reporter.log("Clicking on ParasoftDTP Link");
     }
 
     public void clickParasoft_ctpLink(){
-        WebElement eleParasoftCTP = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftCTP));
+        WebElement eleParasoftCTP = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftCTP));
         eleParasoftCTP.click();
         Reporter.log("Clicking on ParasoftCTP Link");
     }
 
     public void clickParasoft_selenicLink(){
-        WebElement eleParasoftSelenic = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftSelenic));
+        WebElement eleParasoftSelenic = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftSelenic));
         eleParasoftSelenic.click();
         Reporter.log("Clicking on ParasoftSelenic Link");
     }
 
     public void clickParasoft_soatestLink(){
-        WebElement eleParasoftSoatest = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftSoatest));
+        WebElement eleParasoftSoatest = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftSoatest));
         eleParasoftSoatest.click();
         Reporter.log("Clicking on ParasoftSOAtest Link");
     }
 
     public void clickParasoft_virtualizeLink() {
-        WebElement eleParasoftVirtualize = wait.until(ExpectedConditions.elementToBeClickable(linkParasoftVirtualize));
+        WebElement eleParasoftVirtualize = wait.until(ExpectedConditions.elementToBeClickable(lnkParasoftVirtualize));
         eleParasoftVirtualize.click();
         Reporter.log("Clicking on ParasoftVirtualize Link");
     }
