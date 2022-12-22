@@ -15,10 +15,10 @@ public class ForgetLoginInfoPage {
     @FindBy(linkText = "Forgot login info?")
     public WebElement linkForgetLogin;
 
-    @FindBy(xpath = "//*[@id=\'rightPanel\']/h1")  // single qoutes in xpath
+    @FindBy(xpath = "//*[@id='rightPanel']/h1")  // single qoutes in xpath
     public WebElement lblTitle;
 
-    @FindBy(xpath = "//*[@id=\'rightPanel\']/p") // single qoutes in xpath
+    @FindBy(xpath = "//*[@id='rightPanel']/p") // single qoutes in xpath
     public WebElement lblMsgTitle;
 
     @FindBy(id = "firstName")
@@ -78,45 +78,45 @@ public class ForgetLoginInfoPage {
 
     }
 
-    public void firstName(String first_name) {
+    public void enterFirstName(String first_name) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtFirstName));
         ele.sendKeys(first_name);
         Reporter.log("Entering first name:" + first_name);
     }
 
-    public void lastName(String last_name) {
+    public void enterLastName(String last_name) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtLastName)); // webdriver wait changes
         ele.sendKeys(last_name);
         Reporter.log("Entering last name:" + last_name);
     }
 
-    public void address(String address1) {
+    public void enterAddress(String address1) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtAddress));
         ele.sendKeys(address1);
         Reporter.log("Entering address:" + address1);
 
     }
 
-    public void city(String city1) {
+    public void enterCity(String city1) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtCity));   // webdriver wait changes
         ele.sendKeys(city1);
         Reporter.log("Entering city:" + city1);
 
     }
 
-    public void state(String state1) {
+    public void enterState(String state1) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(txtState));   // webdriver wait changes
         ele.sendKeys(state1);
         Reporter.log("Entering state:" + state1);
     }
 
-    public void zip(String zip_code1) {
+    public void enterZipCode(String zip_code1) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(digitZipCode));   // webdriver wait changes
         ele.sendKeys(zip_code1);
         Reporter.log("Entering state:" + zip_code1);
     }
 
-    public void ssnCode(String ssn_number1) {
+    public void enterSSNCode(String ssn_number1) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(digitSsnCode));   // webdriver wait changes
         ele.sendKeys(ssn_number1);
         Reporter.log("Entering state:" + ssn_number1);

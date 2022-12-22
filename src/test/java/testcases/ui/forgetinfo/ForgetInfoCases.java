@@ -31,7 +31,6 @@ public class ForgetInfoCases {
         driver = br.getDriver();
         forgetLoginInfoPage = new ForgetLoginInfoPage(br.getDriver());
     }
-
     @Test
     public void tC001_ForgetInfoParaBank() throws InterruptedException {
         testCase = TestDataReader.readProperties("ForgetLoginInfo.properties");
@@ -39,13 +38,13 @@ public class ForgetInfoCases {
         forgetLoginInfoPage.clickForgotLoginInfo();
         forgetLoginInfoPage.getTitle(testCase.getProperty("title1"));
         forgetLoginInfoPage.getInfoTitle(testCase.getProperty("title2"));
-        forgetLoginInfoPage.firstName(testCase.getProperty("first_name"));
-        forgetLoginInfoPage.lastName(testCase.getProperty("last_name"));
-        forgetLoginInfoPage.address(testCase.getProperty("address1"));
-        forgetLoginInfoPage.city(testCase.getProperty("city1"));
-        forgetLoginInfoPage.state(testCase.getProperty("state1"));
-        forgetLoginInfoPage.zip(testCase.getProperty("zip_code1"));
-        forgetLoginInfoPage.ssnCode(testCase.getProperty("ssn_number1"));
+        forgetLoginInfoPage.enterFirstName(testCase.getProperty("first_name"));
+        forgetLoginInfoPage.enterLastName(testCase.getProperty("last_name"));
+        forgetLoginInfoPage.enterAddress(testCase.getProperty("address1"));
+        forgetLoginInfoPage.enterCity(testCase.getProperty("city1"));
+        forgetLoginInfoPage.enterState(testCase.getProperty("state1"));
+        forgetLoginInfoPage.enterZipCode(testCase.getProperty("zip_code1"));
+        forgetLoginInfoPage.enterSSNCode(testCase.getProperty("ssn_number1"));
         forgetLoginInfoPage.clickLogIn();
 
     }
