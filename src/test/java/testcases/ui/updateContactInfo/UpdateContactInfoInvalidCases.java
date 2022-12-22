@@ -97,50 +97,5 @@ public class UpdateContactInfoInvalidCases {
         updateContactInfoPage.enterPhone(testcase.getProperty("phone"));
         updateContactInfoPage.lnkUpdateInfo();
     }
-  /*  @Test
-    public void tc_008_invalidUpdateContactInfo_parabank()
-    {
-        testcase= TestDataReader.readProperties("register.properties");
-        br.navigateUrl(browser.getProperty("url"));
-        registerPage.clickRegister();
-        registerPage.enterSsn(testcase.getProperty("ssn"));
-        registerPage.lnkUpdateInfo();
-    }
-    @Test
-    public void tc_009_invalidUpdateContactInfo_parabank()
-    {
-        testcase= TestDataReader.readProperties("register.properties");
-        br.navigateUrl(browser.getProperty("url"));
-        registerPage.clickRegister();
-        registerPage.enterUserName(testcase.getProperty("username"));
-        registerPage.lnkUpdateInfo();
-    }
-    @Test
-    public void tc_010_invalidUpdateContactInfo_parabank()
-    {
-        testcase= TestDataReader.readProperties("register.properties");
-        br.navigateUrl(browser.getProperty("url"));
-        registerPage.clickRegister();
-        registerPage.enterPassword(testcase.getProperty("password"));
-        registerPage.clickRegister1();
-    }
-    @Test
-    public void tc_011_invalidUpdateContactInfo_parabank()
-    {
-        testcase= TestDataReader.readProperties("register.properties");
-        br.navigateUrl(browser.getProperty("url"));
-        registerPage.clickRegister();
-        registerPage.enterConfirm(testcase.getProperty("confirm"));
-        registerPage.clickRegister1();
-    }
-    @Test
-    public void tc_012_invalidUpdateContactInfo_parabank()
-    {
-        testcase= TestDataReader.readProperties("register.properties");
-        br.navigateUrl(browser.getProperty("url"));
-        registerPage.clickRegister();
-        registerPage.enterFirstName(testcase.getProperty("firstname"));
-        registerPage.enterConfirm(testcase.getProperty("confirm"));
-        registerPage.clickRegister1();
-    }*/
+   
 }
