@@ -5,7 +5,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import pageObjects.BillPayPg;
+import pageObjects.BillPayPage;
 import pageObjects.LoginPage;
 import utility.Browser;
 import utility.TestDataReader;
@@ -13,12 +13,12 @@ import utility.TestDataReader;
 
 import java.util.Properties;
 
-public class BillPayPgCase
+public class BillPayCase
 {
     Properties testcase2;
-    BillPayPg billPayPg;
+    BillPayPage billPayPage;
     Properties testcase;
-    LoginPage login;
+    LoginPage loginPage;
     Properties browser;
     Browser br;
     WebDriver driver;
@@ -35,33 +35,33 @@ public class BillPayPgCase
         br.launchBrowser();
         br.maximize();
         driver = br.getDriver();
-        login = new LoginPage(br.getDriver());
-        billPayPg = new BillPayPg(br.getDriver());
+        loginPage = new LoginPage(br.getDriver());
+        billPayPage = new BillPayPage(br.getDriver());
         // for login
         testcase = TestDataReader.readProperties("tc001.properties");
         br.navigateUrl(browser.getProperty("url"));
-        login.enterUsername(testcase.getProperty("username"));
-        login.enterPassword(testcase.getProperty("password"));
-        login.clickLogIn();
+        loginPage.enterUsername(testcase.getProperty("username"));
+        loginPage.enterPassword(testcase.getProperty("password"));
+        loginPage.clickLogIn();
     }
     //-----------------------------------------
 
     @Test
     public void billPayTestCase()
     {
-        billPayPg.clickBillPay();
+        billPayPage.clickBillPay();
         testcase2 = TestDataReader.readProperties("billpay.properties");
-        billPayPg.enterTxtPayeename(testcase2.getProperty("payee"));
-        billPayPg.enterTextAdresss(testcase2.getProperty("address"));
-        billPayPg.enterTxtCity(testcase2.getProperty("city"));
-        billPayPg.enterTxtState(testcase2.getProperty("state"));
-        billPayPg.enterTxtZipcode(testcase2.getProperty("zipcode"));
-        billPayPg.enterTxtPhonenumber(testcase2.getProperty("phone"));
-        billPayPg.enterTxtAccountnumber(testcase2.getProperty("account"));
-        billPayPg.enterTxtVerifyAccount(testcase2.getProperty("verifyaccount"));
-        billPayPg.enterTxtAmount(testcase2.getProperty("amount"));
-        billPayPg.enterSelectAccount();
-        billPayPg.clickBtnSend();
+        billPayPage.enterTxtPayeename(testcase2.getProperty("payee"));
+        billPayPage.enterTextAdresss(testcase2.getProperty("address"));
+        billPayPage.enterTxtCity(testcase2.getProperty("city"));
+        billPayPage.enterTxtState(testcase2.getProperty("state"));
+        billPayPage.enterTxtZipcode(testcase2.getProperty("zipcode"));
+        billPayPage.enterTxtPhonenumber(testcase2.getProperty("phone"));
+        billPayPage.enterTxtAccountnumber(testcase2.getProperty("account"));
+        billPayPage.enterTxtVerifyAccount(testcase2.getProperty("verifyaccount"));
+        billPayPage.enterTxtAmount(testcase2.getProperty("amount"));
+        billPayPage.enterSelectAccount();
+        billPayPage.clickBtnSend();
     }
 
     @AfterSuite
