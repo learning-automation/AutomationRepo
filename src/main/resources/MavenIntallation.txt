@@ -1,0 +1,5 @@
+cmd ->mvn -version
+
+
+Maven zip -> unzip the folder ( mostly do it in C driver )
+MAVEN_HOME =
