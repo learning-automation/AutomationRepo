@@ -1,4 +1,4 @@
-package testcases;
+package testcases.ui.billpay;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;

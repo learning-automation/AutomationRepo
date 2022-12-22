@@ -14,7 +14,7 @@ import java.util.Properties;
 public class LoginInValidCases {
 
     Browser br;
-    LoginPage login;
+    LoginPage loginPage;
     WebDriver driver ;
     Properties browser ;
     Properties testCase;
@@ -30,16 +30,16 @@ public class LoginInValidCases {
         br.launchBrowser();
         br.maximize();
         driver = br.getDriver();
-        login = new LoginPage(br.getDriver());
+        loginPage = new LoginPage(br.getDriver());
     }
     @Test
     public void tc001_parabank_invalidlogin(){
         testCase = TestDataReader.readProperties("tc001.properties");
         br.navigateUrl(browser.getProperty("url"));
-        login.enterUsername(testCase.getProperty("username"));
-        login.enterPassword(testCase.getProperty("password"));
-        login.clickLogIn();
-        Assert.assertEquals(login.getErrorElement().getText(), testCase.getProperty("errorMsg"));
+        loginPage.enterUsername(testCase.getProperty("username"));
+        loginPage.enterPassword(testCase.getProperty("password"));
+        loginPage.clickLogIn();
+        Assert.assertEquals(loginPage.getErrorElement().getText(), testCase.getProperty("errorMsg"));
     }
 
     // @Test - only enter username -> click login -> validate error
