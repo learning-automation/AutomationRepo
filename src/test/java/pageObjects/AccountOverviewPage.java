@@ -12,10 +12,10 @@ import java.util.List;
 
 public class AccountOverviewPage {
     @FindBy(xpath = "//a[contains(text(),'Accounts Overview')]")
-    public WebElement linkAccountOverview;
+    public WebElement lnkAccountOverview;
 
     @FindBy(xpath = "//a[@class='ng-binding']")
-    public WebElement linkAccountId;
+    public WebElement lnkAccountId;
 
     @FindBy(xpath = "//*[@id='month']")
     public WebElement ddSelectActivityPeriod;
@@ -24,7 +24,7 @@ public class AccountOverviewPage {
     public WebElement ddSelectType;
 
     @FindBy(xpath = "//*[@value='Go']")
-    public WebElement buttonGo;
+    public WebElement btnGo;
 
     @FindBy(xpath = "//a[contains(text(),'Funds Transfer Received')]")
     public WebElement checkboxFundTransfer;
@@ -39,16 +39,16 @@ public class AccountOverviewPage {
     }
 
     public void clickAccountOverview() {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkAccountOverview));
-       linkAccountOverview.click();
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkAccountOverview));
+       lnkAccountOverview.click();
     }
 
     public void clickAccountId(){
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkAccountId));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkAccountId));
         /*Select entrylist = new Select(ele);
         List<WebElement> multipleentries = entrylist.getOptions();
         entrylist.selectByIndex(0);*/
-        linkAccountId.click();
+        lnkAccountId.click();
     }
 
     public void clickSelectMonths(){
@@ -68,8 +68,8 @@ public class AccountOverviewPage {
     }
 
     public void clickgobutton(){
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(buttonGo));
-        buttonGo.click();
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnGo));
+        btnGo.click();
     }
  
 
