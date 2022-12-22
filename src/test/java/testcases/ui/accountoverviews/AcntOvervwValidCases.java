@@ -47,9 +47,6 @@ public class AcntOvervwValidCases {
         accountoverview.clickSelectMonths();
         accountoverview.clickAccountType();
         accountoverview.clickgobutton();
-
-
-        //acntoverviewobj.fundtransferrecieved();
     }
     /*@Test(priority = 2)
     public void dealwithmultiplewindows(){

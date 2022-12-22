@@ -71,16 +71,7 @@ public class AccountOverviewPage {
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(buttonGo));
         buttonGo.click();
     }
-    /*public void fundtransferrecieved(){
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(fundtransferchkbox));
-        fundtransferchkbox.click();
-        Alert dialog=driver.switchTo().alert();
-        dialog.accept();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }*/
+ 
 
     }
 
