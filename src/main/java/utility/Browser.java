@@ -22,7 +22,7 @@ public class Browser {
 
     public void launchBrowser() {
         if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ashwini\\Downloads\\chromedriver\\chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();

@@ -10,7 +10,7 @@ import utility.TestDataReader;
 
 import java.util.Properties;
 
-public class TestNGTestData1 {
+public class UpdateContactInfoTestcase {
 
     Browser br;
     UpdateContactInfoPage update;

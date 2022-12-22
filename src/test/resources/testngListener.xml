@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Running Regression">
+  <listeners>
+    <listener class-name="listners.TestListners">
+    </listener>
+  </listeners>
+  <test name="Learning Concepts">
+    <classes>
+      <class name="TestDataWithTestcase.UpdateContactInfoTestcase">
+
+      </class>
+    </classes>
+  </test>
+</suite>
