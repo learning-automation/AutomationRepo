@@ -126,7 +126,7 @@ public class UpdateContactInfoPage<lblMsg> {
 
    // public WebElement getMsgElement(){
    public void validateTitle(String title) {
-         Assert.assertEquals(lblMsg,lblMsg.getText());
+         Assert.assertEquals(title,lblMsg.getText());
 
 
 

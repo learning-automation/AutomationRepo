@@ -10,10 +10,10 @@ import utility.TestDataReader;
 
 import java.util.Properties;
 
-public class UpdateContactInfoTestcase {
+public class UpdateContactInfoTestCase {
 
     Browser br;
-    UpdateContactInfoPage update;
+    UpdateContactInfoPage updateContactInfoPage;
     WebDriver driver ;
     Properties browser ;
     Properties testCase;
@@ -26,28 +26,28 @@ public class UpdateContactInfoTestcase {
         br.launchBrowser();
         br.maximize();
         driver = br.getDriver();
-        update = new UpdateContactInfoPage(br.getDriver());
+        updateContactInfoPage = new UpdateContactInfoPage(br.getDriver());
     }
 
     @Test
-    public void TC_001(){
+    public void tc_001_UpdateContactInfoValidCase(){
         testCase = TestDataReader.readProperties("update.properties");
         br.navigateUrl(browser.getProperty("url"));
         // login.enterUsername(testCase.getProperty("username"));
         // login.enterPassword(testCase.getProperty("password"));
         // login.clickLogIn();
-        update.enterFirstname(testCase.getProperty("firstname"));
-        update.enterLastname(testCase.getProperty("lastname"));
-        update.enterAddress(testCase.getProperty("address"));
-        update.enterCity(testCase.getProperty("city"));
-        update.enterState(testCase.getProperty("state"));
-        update.enterZipcode(testCase.getProperty("zipcode"));
-        update.enterPhone(testCase.getProperty("phone"));
-        update.clickUpdate();
-        update.lnkRegister();
-        update.lnkUpdateInfo();
+        updateContactInfoPage.enterFirstname(testCase.getProperty("firstname"));
+        updateContactInfoPage.enterLastname(testCase.getProperty("lastname"));
+        updateContactInfoPage.enterAddress(testCase.getProperty("address"));
+        updateContactInfoPage.enterCity(testCase.getProperty("city"));
+        updateContactInfoPage.enterState(testCase.getProperty("state"));
+        updateContactInfoPage.enterZipcode(testCase.getProperty("zipcode"));
+        updateContactInfoPage.enterPhone(testCase.getProperty("phone"));
+        updateContactInfoPage.clickUpdate();
+        updateContactInfoPage.lnkRegister();
+        updateContactInfoPage.lnkUpdateInfo();
 
-        Assert.assertEquals(update.lblMsg.getText(),testCase.getProperty("errorMsg"));
+        Assert.assertEquals(updateContactInfoPage.lblMsg.getText(),testCase.getProperty("errorMsg"));
     }
 
 
