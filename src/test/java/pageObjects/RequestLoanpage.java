@@ -24,7 +24,7 @@ public class RequestLoanpage {
     public WebElement formaccount;
 
     @FindBy(xpath = "//*[@value='Apply Now']")
-    public WebElement button;
+    public WebElement btn;
 
     @FindBy(xpath = "//div[@class='ng-scope']")
     public WebElement errormsg;
@@ -45,29 +45,29 @@ public class RequestLoanpage {
         Reporter.log("");
     }
 
-    public void enterloanamount(int a) {
+    public void enterLoanAmount(int a) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(loanamount));
         ele.sendKeys();
         Reporter.log("Enter loan amount" + a);
     }
 
-    public void enterdownpayment(int b) {
+    public void enterDownpayment(int b) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(downpayent));
         ele.sendKeys();
         Reporter.log("enter amount" + b);
     }
 
-    public void FormAccount() {
+    public void formAccount() {
        formaccount.click();
         Reporter.log("");
     }
 
-    public void buttonClk() {
-       button.click();
+    public void btnClk() {
+       btn.click();
         Reporter.log("");
     }
 
-    public void statusmsg() {
+    public void lblerror() {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(errormsg));
         Reporter.log("error message");
 

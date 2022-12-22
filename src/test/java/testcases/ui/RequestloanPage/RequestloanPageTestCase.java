@@ -39,11 +39,11 @@ public class RequestloanPageTestCase {
 
         br.navigateUrl(browser.getProperty("url"));
         requestloanpage.requestloanhyperlnk();
-        requestloanpage.enterloanamount(500000);
-        requestloanpage.enterdownpayment(25000);
-        requestloanpage.FormAccount();
-        requestloanpage.buttonClk();
-        requestloanpage.statusmsg();
+        requestloanpage.enterLoanAmount(500000);
+        requestloanpage.enterDownpayment(25000);
+        requestloanpage.formAccount();
+        requestloanpage.btnClk();
+        requestloanpage.lblerror();
 
 
 
