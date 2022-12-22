@@ -12,7 +12,7 @@ import org.testng.Reporter;
 
 //import javax.xml.stream.XMLStreamReader;
 
-public class UpdateContactInfoPage<lblMsg> {
+public class UpdateContactInfoPage{
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -122,15 +122,12 @@ public class UpdateContactInfoPage<lblMsg> {
         Reporter.log("Clicking Update Profile button");
 
     }
-
-
-   // public WebElement getMsgElement(){
-   public void validateTitle(String title) {
+    public void validateTitle(String title) {
          Assert.assertEquals(title,lblMsg.getText());
 
 
 
-     // return lblMsg;
+
        }
 
 
