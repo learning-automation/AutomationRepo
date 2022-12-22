@@ -13,20 +13,20 @@ import java.util.List;
 
 public class TransferFundsPage {
     @FindBy(xpath = "//a[contains(text(),'Transfer Funds')]")
-    public WebElement linkTransferFund;
+    public WebElement lnkTransferFund;
     @FindBy(xpath = "//*[@id='amount']")
     public WebElement txtAmount;
     @FindBy(xpath = "//*[@id='fromAccountId']")
-    public WebElement ddFromAccountList;
+    public WebElement ddSelectFromAccountList;
     @FindBy(xpath = "//*[@id='toAccountId']")
-    public WebElement ddToAccountList;
+    public WebElement ddSelectToAccountList;
     @FindBy(xpath = "//input[@class='button']")
-    public WebElement buttonTransfer;
+    public WebElement btnTransfer;
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private static final String FROM_ACCOUNT = "14232";
-    private static final String TO_ACCOUNT = "14232";
+//    private static final String FROM_ACCOUNT = "14232";
+//    private static final String TO_ACCOUNT = "14232";
 
     public TransferFundsPage(WebDriver driver)
     {
@@ -37,9 +37,7 @@ public class TransferFundsPage {
 
     public void clickTransferFunds()
     {
-
-
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkTransferFund));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkTransferFund));
         ele.click();
         Reporter.log("Click On Transfer Fund Link");
     }
@@ -57,29 +55,29 @@ public class TransferFundsPage {
         txtAmount.sendKeys(amt);
             Reporter.log("Enter the Amount " +amt);
     }
-    public void fromAccount()
+    public void selectFromAccount(String FROM_ACCOUNT)
     {
-        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(ddFromAccountList));
+        WebElement elelist = wait.until(ExpectedConditions.elementToBeClickable(ddSelectFromAccountList));
         Select fromAccntNolist = new Select(elelist);
         List<WebElement> accountOptions = fromAccntNolist.getOptions();
         fromAccntNolist.selectByValue(FROM_ACCOUNT);
-        ddFromAccountList.click();
+        ddSelectFromAccountList.click();
         Reporter.log("Selecting FromAccount Number: "+FROM_ACCOUNT);
     }
-    public void toAccount()
+    public void selectToAccount(String TO_ACCOUNT)
     {
-        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(ddToAccountList));
+        WebElement eletlist = wait .until(ExpectedConditions.elementToBeClickable(ddSelectToAccountList));
         Select toAccntNolist = new Select(eletlist);
         List<WebElement> accountOptions = toAccntNolist.getOptions();
         toAccntNolist.selectByValue(TO_ACCOUNT);
-        ddToAccountList.click();
+        ddSelectToAccountList.click();
         Reporter.log("Selecting ToAccount Number:"+TO_ACCOUNT);
 
     }
-    public void clickButton()
+    public void clickTransferButton()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(buttonTransfer));
-        buttonTransfer.click();
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnTransfer));
+        btnTransfer.click();
         Reporter.log("Clicking Transfer Button");
     }
 
