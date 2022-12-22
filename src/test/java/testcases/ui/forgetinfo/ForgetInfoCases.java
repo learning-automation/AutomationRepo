@@ -1,4 +1,5 @@
 package testcases.ui.forgetinfo;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -6,6 +7,7 @@ import org.testng.annotations.Test;
 import pageObjects.ForgetLoginInfoPage;
 import utility.Browser;
 import utility.TestDataReader;
+
 import java.util.Properties;
 
 public class ForgetInfoCases {
@@ -34,7 +36,7 @@ public class ForgetInfoCases {
     public void tC001_ForgetInfoParaBank() throws InterruptedException {
         testCase = TestDataReader.readProperties("ForgetLoginInfo.properties");
         br.navigateUrl(browser.getProperty("url"));
-        forgetLoginInfoPage.click_info();
+        forgetLoginInfoPage.clickForgotLoginInfo();
         forgetLoginInfoPage.getTitle(testCase.getProperty("title1"));
         forgetLoginInfoPage.getInfoTitle(testCase.getProperty("title2"));
         forgetLoginInfoPage.firstName(testCase.getProperty("first_name"));
