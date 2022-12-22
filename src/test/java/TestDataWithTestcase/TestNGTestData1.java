@@ -44,8 +44,8 @@ public class TestNGTestData1 {
         update.enterZipcode(testCase.getProperty("zipcode"));
         update.enterPhone(testCase.getProperty("phone"));
         update.clickUpdate();
-        update.linkRegister();
-        update.linkUpdateInfo();
+        update.lnkRegister();
+        update.lnkUpdateInfo();
 
         Assert.assertEquals(update.lblMsg.getText(),testCase.getProperty("errorMsg"));
     }

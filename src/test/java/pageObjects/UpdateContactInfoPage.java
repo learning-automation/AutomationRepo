@@ -42,10 +42,10 @@ public class UpdateContactInfoPage<lblMsg> {
         public WebElement btnUpdate;
 
     @FindBy(xpath="//a[@href='register.htm']")
-    public WebElement linkRegister;
+    public WebElement lnkRegister;
 
     @FindBy(xpath="//a[@href='/parabank/updateprofile.htm']")
-    public WebElement linkUpdateInfo;
+    public WebElement lnkUpdateInfo;
 
 
     @FindBy(xpath = "//*[@class='title']")
@@ -101,17 +101,17 @@ public class UpdateContactInfoPage<lblMsg> {
         Reporter.log("Entering Phone Number:" + phone);
     }
 
-    public void linkRegister()
+    public void lnkRegister()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkRegister));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkRegister));
         ele.click();
         Reporter.log("Click on Register");
 
     }
 
-    public void linkUpdateInfo()
+    public void lnkUpdateInfo()
     {
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(linkUpdateInfo));
+        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkUpdateInfo));
         ele.click();
         Reporter.log("Click on Update Contact Info");
     }
