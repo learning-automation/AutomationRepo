@@ -11,10 +11,10 @@ import utility.TestDataReader;
 
 import java.util.Properties;
 
-public class AcntOvervwValidCases {
+public class AccountOverviewValidCases {
     Browser br;
     LoginPage login;
-    AccountOverviewPage accountoverview;
+    AccountOverviewPage accountOverview;
     WebDriver driver;
     Properties browser;
     Properties testcase;
@@ -31,7 +31,7 @@ public class AcntOvervwValidCases {
         br.maximize();
         driver = br.getDriver();
         login = new LoginPage(br.getDriver());
-        accountoverview = new AccountOverviewPage(br.getDriver());
+        accountOverview = new AccountOverviewPage(br.getDriver());
         testcase = TestDataReader.readProperties("tc001.properties");
         br.navigateUrl(browser.getProperty("url"));
         login.enterUsername(testcase.getProperty("username"));
@@ -43,11 +43,11 @@ public class AcntOvervwValidCases {
 
     public void tc001_acntoverview_validcase1(){
         br.navigateUrl(browser.getProperty("url"));
-        accountoverview.clickAccountOverview();
-        accountoverview.clickAccountId();
-        accountoverview.clickSelectMonths();
-        accountoverview.clickAccountType();
-        accountoverview.clickgobutton();
+        accountOverview.clickAccountOverview();
+        accountOverview.clickAccountId();
+        accountOverview.clickSelectMonths();
+        accountOverview.clickAccountType();
+        accountOverview.clickgobutton();
     }
     /*@Test(priority = 2)
     public void dealwithmultiplewindows(){

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class AccountOverviewPage {
     public void clickAccountOverview() {
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkAccountOverview));
        lnkAccountOverview.click();
+        Reporter.log("clicking on the account overview link");
     }
 
     public void clickAccountId(){
@@ -49,6 +51,7 @@ public class AccountOverviewPage {
         List<WebElement> multipleentries = entrylist.getOptions();
         entrylist.selectByIndex(0);*/
         lnkAccountId.click();
+        Reporter.log("clicking on the account id link");
     }
 
     public void clickSelectMonths(){
@@ -57,6 +60,7 @@ public class AccountOverviewPage {
         List<WebElement> monthsoption = monthslist.getOptions();
         monthslist.selectByIndex(12);
        ddSelectActivityPeriod.click();
+       Reporter.log("selecting the months from dd list");
     }
 
     public void clickAccountType(){
@@ -64,12 +68,14 @@ public class AccountOverviewPage {
         Select accounttypelist  = new Select(eleacnttypelist);
         List<WebElement> accountoption = accounttypelist.getOptions();
         accounttypelist.selectByIndex(2);
-    ddSelectType.click();
+        ddSelectType.click();
+        Reporter.log("Selecting the type of account from dd list");
     }
 
     public void clickgobutton(){
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnGo));
         btnGo.click();
+        Reporter.log("click on go button");
     }
  
 
