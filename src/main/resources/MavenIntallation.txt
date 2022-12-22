@@ -1,5 +1,19 @@
 cmd ->mvn -version
+if you get error ->
+mvn is not recognized as ....
 
+Follow the Steps -
 
 Maven zip -> unzip the folder ( mostly do it in C driver )
-MAVEN_HOME =
+MAVEN_HOME = C:\Maven\apache-maven-3.6.3
+
+Open system environment variable > Environment variables > System variables
++ new variable in the below area > create Maven Home variable
+
+path variable > edit ->> add at the end -> ;%MAVEN_HOME%\bin > ok > ok
+
+check maven
+cmd ->mvn -version
+
+
+
