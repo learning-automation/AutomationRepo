@@ -1,0 +1,19 @@
+To Register hub
+
+1) navigate to directory where we have downloaded the jar
+2) launch the cmd
+3) java -jar selenium-server-standalone-2.53.0.jar -role hub
+4) wait till you see the message "Selenium Grid is up and running"
+5) Do not close it
+
+To Register node
+
+1) navigate to directory where we have downloaded the jar
+2) launch the cmd
+3) java -jar selenium-server-standalone-2.53.0.jar -role node -hub url ( get from hub cmd window )
+4) wait till you see the message "Selenium node is ready to use"
+5) Do not close it
+
+Run your test as per the needed command
+mvn clean test -Dtestng=testng_smoke.xml -Dbrowser=chromeGrid
+

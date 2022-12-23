@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Running Regression " >
+    <listeners>
+        <listener class-name="listners.TestListners"/>
+    </listeners>
+  <test name="Learning concepts">
+   <classes>
+       <class name="testcases.ui.login.LoginInValidCases">
+           <methods>
+               <include name="tc001_parabank_invalidlogin"/>
+           </methods>
+       </class>
+   </classes>
+  </test>
+</suite>
