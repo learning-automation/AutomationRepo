@@ -42,16 +42,16 @@ public class RequestLoanpage {
     public void requestloanhyperlnk() {
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(lnkrequestloan));
         ele.click();
-        Reporter.log("");
+        Reporter.log("click hyper link");
     }
 
-    public void enterLoanAmount(int a) {
+    public void enterLoanAmount(String a) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(loanamount));
         ele.sendKeys();
         Reporter.log("Enter loan amount" + a);
     }
 
-    public void enterDownpayment(int b) {
+    public void enterDownpayment(String b) {
         WebElement ele = wait.until(ExpectedConditions.visibilityOf(downpayent));
         ele.sendKeys();
         Reporter.log("enter amount" + b);
@@ -59,12 +59,12 @@ public class RequestLoanpage {
 
     public void formAccount() {
        formaccount.click();
-        Reporter.log("");
+        Reporter.log("Click on Account no");
     }
 
-    public void btnClk() {
+    public void buttonClick() {
        btn.click();
-        Reporter.log("");
+        Reporter.log("click");
     }
 
     public void lblerror() {

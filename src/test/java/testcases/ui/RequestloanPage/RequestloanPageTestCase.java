@@ -35,14 +35,14 @@ public class RequestloanPageTestCase {
 
     }
     @Test
-    public void loginToparaBank(){
+    public void Tc_001RequestLoan(){
 
         br.navigateUrl(browser.getProperty("url"));
         requestloanpage.requestloanhyperlnk();
-        requestloanpage.enterLoanAmount(500000);
-        requestloanpage.enterDownpayment(25000);
+        requestloanpage.enterLoanAmount(browser.getProperty("a"));
+        requestloanpage.enterDownpayment(browser.getProperty("b"));
         requestloanpage.formAccount();
-        requestloanpage.btnClk();
+        requestloanpage.buttonClick();
         requestloanpage.lblerror();
 
 
