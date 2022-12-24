@@ -24,8 +24,8 @@ public class FindTransactions {
     @FindBy(xpath = "//a[contains(., 'Find Transactions')]")
     WebElement clickFindTransactions;
 
-    @FindBy(xpath = "//*[@id='accountId'")
-    WebElement ddSelectAccount;
+//    @FindBy(xpath = "//*[@id='accountId'")
+//    WebElement ddSelectAccount;
 
     @FindBy(xpath = "//*[@id='criteria.transactionId']")
     WebElement enterTransactionID;
@@ -62,72 +62,78 @@ public class FindTransactions {
 //    @FindBy(xpath = "//*[@value='Log In' and @class='button']")
 //    WebElement btnLogin;
 //
-    @FindBy(xpath = "//*[@class='error']")
+    @FindBy(xpath = "//*[@class='error' and contains(.,'An internal error has occurred and has been logged.')]")
     WebElement errorMsg;
 
 //
 
 
     public void setClickFindTransactions(){
-        WebElement element1 = this.wait.until(ExpectedConditions.elementToBeClickable(clickFindTransactions));
-        element1.click();
+//        WebElement element1 = this.wait.until(ExpectedConditions.elementToBeClickable(clickFindTransactions));
+//        element1.click();
+        clickFindTransactions.click();
     }
 
-            public void setddSelectAccount(String selectAccount){
-                Select s = new Select(ddSelectAccount);
-                s.selectByValue(selectAccount);
-                Reporter.log("Selected Account nummber is >>>" + selectAccount);
-            }
+//            public void setddSelectAccount(String selectAccount){
+//                Select s = new Select(ddSelectAccount);
+//                s.selectByIndex(0);
+//                Reporter.log("Selected Account nummber is >>>" + selectAccount);
+//            }
 
                 public void setEnterTransactionID(String enterTransID) {
-                    WebElement element2 = this.wait.until(ExpectedConditions.elementToBeClickable(enterTransactionID));
-                    element2.sendKeys(enterTransID);
+//                    WebElement element2 = this.wait.until(ExpectedConditions.elementToBeClickable(enterTransactionID));
+//                    element2.sendKeys(enterTransID);
+                    enterTransactionID.sendKeys(enterTransID);
                     Reporter.log("Selected Transaction ID is >>>" + enterTransID);
                 }
 
                     public void setEnterTransactionByDate(String ByDate){
-                        WebElement element3= this.wait.until(ExpectedConditions.elementToBeClickable(enterTransactiByDate));
-                        element3.sendKeys(ByDate);
+//                        WebElement element3= this.wait.until(ExpectedConditions.elementToBeClickable(enterTransactiByDate));
+//                        element3.sendKeys(ByDate);
+                        enterTransactiByDate.sendKeys(ByDate);
                         Reporter.log("Selected Transaction Date is >>>" + ByDate);
 
                     }
 
     public void setEnterTransactionFromDate(String FromDate){
-        WebElement element4=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionFromDate));
-        element4.sendKeys(FromDate);
+//        WebElement element4=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionFromDate));
+//        element4.sendKeys(FromDate);
+        enterTransactionFromDate.sendKeys(FromDate);
         Reporter.log("From Date is >>>" + FromDate);
             }
 
             public void setEnterTransactionToDate(String ToDate){
-                WebElement element5=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionToDate));
-                element5.sendKeys(ToDate);
+//                WebElement element5=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionToDate));
+//                element5.sendKeys(ToDate);
+                enterTransactionToDate.sendKeys(ToDate);
                 Reporter.log("To Date is >>>"+ ToDate);
             }
 
                 public void setEnterTransactionAmount(String Amount){
-                    WebElement element6=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionAmount));
-                    element6.sendKeys(Amount);
+//                    WebElement element6=wait.until(ExpectedConditions.elementToBeClickable(enterTransactionAmount));
+//                    element6.sendKeys(Amount);
+                    enterTransactionAmount.sendKeys(Amount);
                     Reporter.log("Transaction Amount is >>>" + Amount);
                 }
 
                     public void clickBtnFindTransactionByID(){                                /* Methods for Buttons */
-                        WebElement btn1= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByID));
-                        btn1.click();
+//                        WebElement btn1= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByID));
+                        btnFindTransactionByID.click();
                     }
 
                         public void clickBtnFindTransactionByDate(){
-                            WebElement btn2= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByDate));
-                            btn2.click();
+//                            WebElement btn2= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByDate));
+                            btnFindTransactionByDate.click();
                         }
 
     public void clickBtnFindTransactionByDateRange(){
-        WebElement btn3= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByDateRange));
-        btn3.click();
+//        WebElement btn3= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByDateRange));
+        btnFindTransactionByDateRange.click();
         }
 
             public void clickBtnFindTransactionByAmount(){
-                WebElement btn4= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByAmount));
-                btn4.click();
+//                WebElement btn4= wait.until(ExpectedConditions.visibilityOf(btnFindTransactionByAmount));
+                btnFindTransactionByAmount.click();
         }
 
                 public WebElement getErrorMsg(){
