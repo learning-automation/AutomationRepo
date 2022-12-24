@@ -10,7 +10,9 @@ To Register node
 
 1) navigate to directory where we have downloaded the jar
 2) launch the cmd
-3) java -jar selenium-server-standalone-2.53.0.jar -role node -hub url ( get from hub cmd window )
+3) java -jar selenium-server-standalone-2.53.0.jar -role node -hub http://192.1
+   68.1.11:4444/grid/register -Dwebdriver.chrome.driver=D:\GitRepo2\AutomationRepo\
+   src\main\resources\drivers\chromedriver.exe ( get from hub cmd window )
 4) wait till you see the message "Selenium node is ready to use"
 5) Do not close it
 
