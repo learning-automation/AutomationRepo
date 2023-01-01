@@ -1,7 +1,6 @@
 package practice.Mayur;
 
 import java.util.Arrays;
-
 //To sort an array in ascending order
 public class Program2 {
     public static void main(String[] args) {

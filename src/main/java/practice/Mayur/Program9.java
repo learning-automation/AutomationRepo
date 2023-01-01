@@ -1,7 +1,7 @@
 package practice.Mayur;
-//To find number is even or odd
-import java.util.Scanner;
 
+import java.util.Scanner;
+//To find number is even or odd
 public class Program9 {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);

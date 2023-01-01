@@ -1,7 +1,6 @@
 package practice.Mayur;
 
 import java.util.Scanner;
-
 //Factorial of given number
 public class Program11 {
     public static void main(String[] args) {
@@ -9,6 +8,7 @@ public class Program11 {
         System.out.println("Enter the factorial number which you want");
         int num=sc.nextInt();
         long factorial=1;
+
         for(int i=1;i<=num;i++){
             factorial=factorial*i;
         }
