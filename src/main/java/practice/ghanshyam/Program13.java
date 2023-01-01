@@ -13,9 +13,9 @@ public class Program13 {
         String[] arr = s.split(" ");
         int count = 0;
         Map<String,Integer>map = new TreeMap<>();//took reference frm net
-        for(int i = 0; i<arr.length;i++){
+        for(int i = 0; i<arr.length; i++){
             count=0;
-            for(int j = 0;j<arr.length;j++){
+            for(int j = 0; j<arr.length; j++){
                 if(arr[i].equals(arr[j]))
                     count++;
 

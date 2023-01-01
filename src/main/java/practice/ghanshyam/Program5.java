@@ -19,7 +19,7 @@ public class Program5 {
          String s2 = "";
          int l = s.length();
 
-         for(int i=l-1;i>=0;i--){
+         for(int i=l-1; i>=0; i--){
              s2 = s2 + s.charAt(i);
          }
          System.out.println(s2);
