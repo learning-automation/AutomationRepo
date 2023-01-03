@@ -34,7 +34,6 @@ public class Browser {
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
         } else if (browserName.equalsIgnoreCase("chromeGrid")) {
-            System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setBrowserName("chrome");
             String huburl = "http://192.168.1.11:4444/wd/hub";
