@@ -15,6 +15,6 @@ public class Program12 {
                 charMap.put(c,1);
             }
         }
-            System.out.println(str+":"+charMap);
+            System.out.println(str+" "+charMap);
     }
 }
