@@ -3,11 +3,25 @@ package practice.Mayur;
 import java.util.Arrays;
 //To sort an array in ascending order
 public class Program2 {
-    public static void main(String[] args) {
-        int[]a={5,7,96,35,85,1245,215,356,253};
-        System.out.println("Array Elements before sorting:"+ Arrays.toString(a));
-        Arrays.sort(a);
-        System.out.println("Array Elements after sorting:"+Arrays.toString(a));
+    public static void main(String[] args)
+    {
+//creating an instance of an array
+        int[] a = new int[] {25,63,96,54,26, 1, 3, -1, -4, 6};
+        System.out.println("Array elements after sorting:");
+        for (int i = 0; i < a.length; i++)
+        {
+            for (int j = i + 1; j < a.length; j++)
+            {
+                int tmp;
+                if (a[i] > a[j])
+                {
+                    tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
+                }
+            }
+//prints the sorted element of the array
+            System.out.print(" "+a[i]);
+        }
     }
-
 }
