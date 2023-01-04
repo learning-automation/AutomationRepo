@@ -4,19 +4,20 @@ package practice.Renuka;
 public class Program14 {
     public static void main(String[] args){
         String str = "my name is renuka";
-        char[] ch = str.toCharArray();
+        char[] charArray = str.toCharArray();
         boolean toLowerCase = true;
-        for(int i=0; i<ch.length; i++){
-            if(ch[i]!=' '){
+        for(int i=0; i<charArray.length; i++)
+        {
+            if(charArray[i]!=' '){
                 if(toLowerCase){
-                    ch[i] = Character.toLowerCase(ch[i]);
+                    charArray[i] = Character.toLowerCase(charArray[i]);
                 } else{
-                    ch[i] = Character.toUpperCase(ch[i]);
+                    charArray[i] = Character.toUpperCase(charArray[i]);
                 }
-                toLowerCase =!toLowerCase;
+                toLowerCase = !toLowerCase;
             }
         }
-        System.out.println(new String(ch));
+        System.out.println(new String(charArray));
     }
     }
 
