@@ -1,5 +1,5 @@
 package practice.Mayur;
-
+//to count number of string words in paragraph
 import java.util.HashMap;
 
 public class Program13 {
