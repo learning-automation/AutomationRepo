@@ -15,10 +15,6 @@ public class Program12 {
                 charMap.put(c,1);
             }
         }
-        for (Character c2:charMap.keySet()) {
-            System.out.println(c2+"="+charMap.get(c2));
-
-        }
-
+            System.out.println(str+":"+charMap);
     }
 }
