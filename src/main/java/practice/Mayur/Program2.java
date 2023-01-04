@@ -6,7 +6,7 @@ public class Program2 {
     public static void main(String[] args)
     {
 //creating an instance of an array
-        int[] a = new int[] {25,63,96,54,26, 1, 3, -1, -4, 6};
+        int[] a ={25,63,96,54,26, 1, 3, -1, -4, 6};
         System.out.println("Array elements after sorting:");
         for (int i = 0; i < a.length; i++)
         {
