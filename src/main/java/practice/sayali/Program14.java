@@ -9,12 +9,18 @@ public class Program14 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Your String");
         String str = sc.nextLine();
-        str = str.toLowerCase();
-        char[] ch = str.toCharArray();
-        for(int i = 1; i < ch.length; i = i+2){
-            ch[i] = Character.toUpperCase(ch[i]);
-        }
+        String[] letter = str.split(" ");
+        for(String s : letter){
+            char[] s1 = s.toCharArray();
+            for(int i = 0; i < s1.length; i++){
+                if(i % 2 == 0 && s1[i]!= ' ')
+                    s1[i] = Character.toUpperCase(s1[i]);
+                else
+                    s1[i] = Character.toLowerCase(s1[i]);
+                System.out.print(s1[i]);
+            }
+            System.out.print(" ");
 
-        System.out.println("Result String is : "+new String(ch));
+        }
     }
 }
