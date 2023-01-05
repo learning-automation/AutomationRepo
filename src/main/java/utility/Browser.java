@@ -2,10 +2,6 @@ package utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 public class Browser {
 
@@ -13,9 +9,7 @@ public class Browser {
     public static WebDriver driver;
 
     public Browser(String browserName) {
-
-        //this.browserName = browserName;
-        this.browserName = System.getProperty("browser");
+        this.browserName = browserName;
     }
 
     public String getBrowserName() {
@@ -26,25 +20,13 @@ public class Browser {
         return driver;
     }
 
-    public void launchBrowser(){
-
+    public void launchBrowser() {
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
-        } /*else if (browserName.equalsIgnoreCase("chromeGrid")) {
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-            capabilities.setBrowserName("chrome");
-            String huburl = "http://192.168.1.11:4444/wd/hub";
-            try {
-                driver = new RemoteWebDriver(new URL(huburl), capabilities);
-            }catch(Exception e){
-                System.out.println(">>>>>>>>>>>> failed to launch grid" );
-                e.printStackTrace();
-            }
-        }*/
-        else {
+        } else {
             System.out.println("the driver provided is not avaialable");
         }
         // by default 60 sec implicit wait
