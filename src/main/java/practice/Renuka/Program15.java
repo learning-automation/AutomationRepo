@@ -7,8 +7,6 @@ public class Program15 {
     public static void main(String[] args) {
         String s = "  my name is renuka  ";
 
-        // System.out.println("Print the Length String S : " + s.length());
-
         String[] splitedString = s.trim().split(" ");
 
         System.out.println("Print the Splited Array : " + splitedString.length);
@@ -19,7 +17,7 @@ public class Program15 {
             } else {
                 System.out.print("  " + splitedString[i].toUpperCase() + " ");
             }
-            //System.out.println("The Splited String is : " +splitedString[i]);
+
         }
 
 
