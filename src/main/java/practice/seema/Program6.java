@@ -11,12 +11,15 @@ public class Program6 {
         number1=sc.nextInt();
         System.out.println("Enter the value for number2");
         number2=sc.nextInt();
-        int temp;
+
         System.out.println("before swap value of number1 and number2 is"+ number1 +" "+number2);
-         temp=number1;
-         number1=number2;
-         number2=temp;
+
+         number1=number1+number2;
+         number2=number1-number2;
+        number1=number1-number2;
         System.out.println("after swap value of number1 and number2 is"+ number1 +" "+number2);
+
+
 
     }
 }

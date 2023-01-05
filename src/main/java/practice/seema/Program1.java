@@ -15,7 +15,7 @@ public class Program1 {
        int thirdTerm;
        System.out.println(firstTerm);
        System.out.println(secondTerm);
-       int i=3;
+       int i=2;
        while(i<number){
            thirdTerm=firstTerm+secondTerm;
            System.out.println(thirdTerm);
