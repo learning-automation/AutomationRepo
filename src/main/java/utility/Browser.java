@@ -33,7 +33,7 @@ public class Browser {
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("chromeGrid")) {
+        } /*else if (browserName.equalsIgnoreCase("chromeGrid")) {
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setBrowserName("chrome");
             String huburl = "http://192.168.1.11:4444/wd/hub";
@@ -43,7 +43,8 @@ public class Browser {
                 System.out.println(">>>>>>>>>>>> failed to launch grid" );
                 e.printStackTrace();
             }
-        } else {
+        }*/
+        else {
             System.out.println("the driver provided is not avaialable");
         }
         // by default 60 sec implicit wait
