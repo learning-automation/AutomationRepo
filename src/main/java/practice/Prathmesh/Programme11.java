@@ -16,6 +16,7 @@ public class Programme11 {
            a=a*(i-1);
         }
        System.out.println(a);
+
     }
 }
 
