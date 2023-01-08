@@ -50,3 +50,7 @@ Deployment checklist -
 Release to stagging -
 and then release to production
 Run book -
+
+
+NEXT PI -
+6th sprint - last 3 days used in PI planning ( last spring generaly considered of 5 working days and oterh 5 days used for release of PI 1 and new PI planning )
