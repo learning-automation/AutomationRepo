@@ -13,7 +13,7 @@ public class Programme12
        String name = sc.nextLine();
         Map<Character,Integer> charmap = new HashMap<>();
         int count = 1, i = 0, j = 0;
-        char name1[] = name.toCharArray();
+        char[] name1 = name.toCharArray();
         for (i = 0; i < name.length(); i++)
         {
             Character c=name1[i];

@@ -10,7 +10,6 @@ public class Programme11 {
         Scanner sc = new Scanner(System.in);
         System.out.println("check factorial");
         int a = sc.nextInt();
-        int b=1;
         for (int i=a;i>1;i--)
         {
            a=a*(i-1);

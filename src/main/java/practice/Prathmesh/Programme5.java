@@ -8,7 +8,7 @@ public class Programme5
     @Test
     public void method1()
     {
-        String name = "Prathmesh";
+        String name = "practice/Prathmesh";
         System.out.println("M1\nOriginal String is: \t"+ name);
         StringBuilder name1= new StringBuilder();
         name1.append(name);
@@ -18,7 +18,7 @@ public class Programme5
     @Test
     public void method2()
     {
-        String name = "Prathmesh";
+        String name = "practice/Prathmesh";
         System.out.println("M2\nOriginal String is: \n"+ name);
         char name1[]=name.toCharArray();
         System.out.println("Reverse String is: \t ");
@@ -30,7 +30,7 @@ public class Programme5
     @Test
     public void method3()
     {
-        String name = "Prathmesh";
+        String name = "practice/Prathmesh";
         System.out.println("M3\nOriginal String is: \n"+ name);
        String name1[] = name.split("");
        System.out.println("Reverse String is: \t ");
@@ -42,7 +42,7 @@ public class Programme5
     @Test
     public void method4()
     {
-        String name = "Prathmesh",reverse="";
+        String name = "practice/Prathmesh",reverse="";
         System.out.println("M4\nOriginal String is: \n"+ name);
         String name1[] = name.split("");
         System.out.println("Reverse String is: \t ");
