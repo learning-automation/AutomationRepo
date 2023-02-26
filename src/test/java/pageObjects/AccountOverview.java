@@ -1,7 +1,10 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class AccountOverview {
+public class AccountOverview extends Operations {
     @FindBy(xpath = "//a[contains(text(),'Accounts Overview')]")
     public WebElement AcntOreview;
 
@@ -29,13 +32,19 @@ public class AccountOverview {
     @FindBy(xpath = "//a[contains(text(),'Funds Transfer Received')]")
     public WebElement fundtransferchkbox;
 
+    @FindBy(xpath = "//button[contains(.,'Follow')]")
+    public WebElement followBtn;
+
     private WebDriver driver;
     private WebDriverWait wait;
+    private JavascriptExecutor js;
 
     public AccountOverview(WebDriver driver) {
+        super(driver);
         PageFactory.initElements(driver, this);
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 90);
+        this.js = (JavascriptExecutor) driver;
     }
 
     public void clickaccountoverview(){
@@ -44,11 +53,7 @@ public class AccountOverview {
     }
 
     public void clickaccountid(){
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(Acntid));
-        /*Select entrylist = new Select(ele);
-        List<WebElement> multipleentries = entrylist.getOptions();
-        entrylist.selectByIndex(0);*/
-        Acntid.click();
+        clickElement(Acntid);
     }
 
     public void clickselectmonths(){
@@ -68,8 +73,17 @@ public class AccountOverview {
     }
 
     public void clickgobutton(){
-        WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(gobutton));
-        gobutton.click();
+        //clickElement(gobutton, true);
+        clickElement(gobutton);
+    }
+    public void clickFollowButton(){
+        js.executeScript("arguments[0].click()", followBtn);
+        js.executeScript("document.getElementById('_wpnonce').click()");
+        js.executeScript("window.scrollBy(0,100)");
+
+        // ----- Syntax for the Java script executor
+        //JavascriptExecutor j1 = (JavascriptExecutor)driver;
+        //j1.executeScript("script", arguments);
     }
     /*public void fundtransferrecieved(){
         WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(fundtransferchkbox));
