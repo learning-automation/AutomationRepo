@@ -1,4 +1,4 @@
-package practice.Prathmesh;
+package practice.Prathmesh.programme;
 import org.testng.annotations.Test;
 import java.util.Scanner;
 //Alternate upper and lower case of alphabates in the string
@@ -12,7 +12,8 @@ public class Programme14
         int i;
         for (String name : words) {
             char word[] = name.toCharArray();
-            for (i = 0; i < name.length(); i++) {
+            for (i = 0; i < name.length(); i++)
+            {
                 if (i % 2 == 0 && word[i] != ' ') {
                     word[i] = Character.toUpperCase(word[i]);
                 } else {

@@ -1,4 +1,4 @@
-package practice.Prathmesh;
+package practice.Prathmesh.programme;
 
 //String sort as per AlphaBates
 public class Programme3 {

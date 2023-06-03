@@ -1,4 +1,4 @@
-package practice.Prathmesh;
+package practice.Prathmesh.programme;
 
 import org.testng.annotations.Test;
 //Swapping numbers
