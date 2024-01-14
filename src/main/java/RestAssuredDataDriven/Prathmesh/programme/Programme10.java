@@ -1,6 +1,4 @@
-package practice.Prathmesh.programme;
-
-import org.testng.annotations.Test;
+package RestAssuredDataDriven.Prathmesh.programme;
 
 import java.util.Scanner;
 

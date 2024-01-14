@@ -1,4 +1,4 @@
-package practice.Prathmesh.programme;
+package RestAssuredDataDriven.Prathmesh.programme;
 import org.testng.annotations.Test;
 import java.util.Scanner;
 //Alternate upper and lower case of alphabates in the string

@@ -1,4 +1,4 @@
-package practice.Prathmesh.programme;
+package RestAssuredDataDriven.Prathmesh.programme;
 
 import org.testng.annotations.Test;
 

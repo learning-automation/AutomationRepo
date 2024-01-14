@@ -1,4 +1,4 @@
-package practice.Prathmesh.programme;
+package RestAssuredDataDriven.Prathmesh.programme;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;

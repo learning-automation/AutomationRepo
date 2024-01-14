@@ -1,4 +1,4 @@
-package practice.Prathmesh.programme;
+package RestAssuredDataDriven.Prathmesh.programme;
 
 //String sort as per AlphaBates
 public class Programme3 {

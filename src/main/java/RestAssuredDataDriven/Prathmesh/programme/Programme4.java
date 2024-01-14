@@ -1,4 +1,4 @@
-package practice.Prathmesh.programme;
+package RestAssuredDataDriven.Prathmesh.programme;
 
 import java.util.Arrays;
 //Largest number from array
