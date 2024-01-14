@@ -1,4 +1,4 @@
-package practice.pankaj;
+package RestAssuredDataDriven.pankaj;
 
 public class Program1 {
     int fact = 1;
